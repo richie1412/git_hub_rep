@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<project>
+  <extend>${basedir}/wxxr_build/project.xml</extend>
+  <groupId>wxxr</groupId>
+  <id>wxxr-mobile-client</id>
+  <name>wxxr-mobile-client project</name>
+  <description>wxxr-mobile-client project</description>
+  <shortDescription>wxxr-mobile-client project</shortDescription>
+  <dependencies>
+    
+  </dependencies>
+
+</project>

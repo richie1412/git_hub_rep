@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="3dip"
+    android:layout_height="30dip"
+    android:background="@drawable/private_zoo_title_stand_line_left"
+    android:orientation="horizontal" >
+
+    <View
+        android:id="@+id/vi_private_zoo_title_line"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

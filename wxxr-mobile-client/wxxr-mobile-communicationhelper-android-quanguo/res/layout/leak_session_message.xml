@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/leak_session_month"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="4月份"
+                    android:textColor="@color/leak_session_month"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <com.wxxr.callhelper.qg.widget.MyListView
+                android:id="@+id/lv_ls_message_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/more_line"
+                android:fadingEdge="none" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/leak_session_month"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="3月份"
+                    android:textColor="@color/leak_session_month"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <com.wxxr.callhelper.qg.widget.MyListView
+                android:id="@+id/lv_ls_message_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/more_line"
+                android:fadingEdge="none" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 漏接电话为空 -->
+
+    <LinearLayout
+        android:id="@+id/ll_leak_session_message_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您还没有漏接电话记录"
+            android:textColor="@color/leak_session_empty"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+</LinearLayout>

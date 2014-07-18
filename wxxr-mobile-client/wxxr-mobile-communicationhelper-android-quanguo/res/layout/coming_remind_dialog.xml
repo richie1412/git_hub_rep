@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical" >
+
+        <!-- 来电提醒操作方式 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_dialog_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_item_long_dialog_margin_left"
+                android:text="选择操作方式"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_item_long_dialog_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_confirm6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_copy"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gd_item_long_dialog_height"
+                android:background="@drawable/gd_item_long_dialog_selector"
+                android:gravity="center"
+                android:text="复制"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_item_long_dialog_text_size" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/gd_dialog_line" />
+
+            <TextView
+                android:id="@+id/tv_transmit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gd_item_long_dialog_height"
+                android:background="@drawable/gd_item_long_dialog_selector"
+                android:gravity="center"
+                android:text="转发"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_item_long_dialog_text_size" />
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="回复图图"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/gd_dialog_line" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gd_item_long_dialog_height"
+                android:background="@drawable/gd_item_long_dialog_selector"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_item_long_dialog_text_size" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/menu_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_call"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="呼叫图图"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

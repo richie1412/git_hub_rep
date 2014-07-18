@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_all"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_title_select"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/gd_pingdao_title_selector"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="微资讯"
+                android:textColor="@color/guishudi_black"
+                android:textSize="@dimen/fontsize_40" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/gd_mininew_down" />
+        </LinearLayout>
+
+        <!-- <Button -->
+        <!-- android:id="@+id/btn_refresh" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:layout_marginRight="15dp" -->
+        <!-- android:background="@drawable/gd_refresh_selector" /> -->
+    </RelativeLayout>
+
+    <include layout="@layout/view_gray_line" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12.5dp"
+        android:paddingRight="12.5dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.wxxr.callhelper.qg.widget.MyGridView
+                android:id="@+id/gv_pingdao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_news_pingdao_margin_top"
+                android:gravity="center"
+                android:horizontalSpacing="14dp"
+                android:listSelector="@color/white"
+                android:numColumns="2"
+                android:verticalSpacing="@dimen/gd_new_bottom_vertical_spacing" >
+            </com.wxxr.callhelper.qg.widget.MyGridView>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="100dip" />
+
+            <com.wxxr.callhelper.qg.widget.MyGridView
+                android:id="@+id/gv_pingdao_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_news_pingdao_margin_top"
+                android:background="@drawable/gd_pingdao_bottom_bg"
+                android:gravity="center"
+                android:listSelector="@color/touming"
+                android:numColumns="5"
+                android:scrollbars="none" >
+            </com.wxxr.callhelper.qg.widget.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

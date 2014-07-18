@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/gd_setting_margin_left"
+            android:paddingRight="@dimen/gd_setting_margin_right"
+            android:orientation="vertical" >
+
+            <!-- 免费选择感兴趣... -->
+
+            <LinearLayout
+                android:id="@+id/gd_ll_interest_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:background="@drawable/gd_setting_switch_bg"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                    android:layout_weight="1"
+                    android:text="免费选择感兴趣的附加资讯"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_setting_switch_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gd_setting_switch_btn_margin_right"
+                    android:background="@drawable/gd_sms_hz_arrow" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_setting_text_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:text="15类资讯频道，如科技数码、人文历史、生活健康..."
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_setting_text_size" />
+
+            <!-- 发出的每条短信... -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_setting_switch_bg"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                    android:layout_weight="1"
+                    android:text="发出的每条短信都接收回执"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_setting_switch_text_size" />
+
+                <ImageView
+                    android:id="@+id/gd_iv_all_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gd_setting_switch_btn_margin_right"
+                    android:background="@drawable/gd_setting_switch_open" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_setting_text_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:text="开启后进入全开模式，手机发出网内点对点短信都将接收到回执短信。"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_setting_text_size" />
+
+            <!-- 短信回执不保存... -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_setting_switch_bg"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                    android:layout_weight="1"
+                    android:text="短信回执不保存在手机终端"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_setting_switch_text_size" />
+
+                <ImageView
+                    android:id="@+id/gd_iv_flashsms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gd_setting_switch_btn_margin_right"
+                    android:background="@drawable/gd_setting_switch_close" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_setting_text_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:text="开启后进入闪信模式，回执短信不保存在手机终端中，但少部分不支持闪信的仍将保存。"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_setting_text_size" />
+
+            <!-- 聊天模式 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_setting_switch_bg"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                    android:layout_weight="1"
+                    android:text="聊天模式生效"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_setting_switch_text_size" />
+
+                <ImageView
+                    android:id="@+id/gd_iv_talk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gd_setting_switch_btn_margin_right"
+                    android:background="@drawable/gd_setting_switch_open" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_setting_text_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:text="开启后，7分钟内对同一号码发送短信超过4条，则只在短信送达失败才提供服务。"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_setting_text_size" />
+
+            <!-- 夜间免打扰 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_setting_switch_bg"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                    android:layout_weight="1"
+                    android:text="夜间免打扰"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_setting_switch_text_size" />
+
+                <ImageView
+                    android:id="@+id/gd_iv_noannoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gd_setting_switch_btn_margin_right"
+                    android:background="@drawable/gd_setting_switch_close" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_setting_text_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:text="开启后,0:00-7:00若有暂未送达短信在30分钟后才成功送达，则成功送达回执在早上7：00后发出。"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_setting_text_size" />
+
+            <!-- 开启回执报告提醒 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_setting_switch_bg"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                    android:layout_weight="1"
+                    android:text="开启回执报告提醒"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_setting_switch_text_size" />
+
+                <ImageView
+                    android:id="@+id/gd_iv_hz_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gd_setting_switch_btn_margin_right"
+                    android:background="@drawable/gd_setting_switch_open" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_setting_text_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_setting_switch_text_margin_left"
+                android:layout_marginTop="@dimen/gd_setting_text_margin_top"
+                android:text="当您有回执报告时，客户端将弹出短信内容提醒您查看。"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_setting_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

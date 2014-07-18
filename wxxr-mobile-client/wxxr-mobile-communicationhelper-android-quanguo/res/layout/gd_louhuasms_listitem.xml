@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/louhua_sms_title"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sms_timetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="AAA"
+                android:textColor="@color/leak_session_month" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dc_sms_time_divline"
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dip"
+            android:background="@color/leak_session_month" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_click"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/tv_head_name_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/logo" 
+            android:layout_marginLeft="20dp" >
+            <TextView
+                android:id="@+id/head_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ll_linear"
+                style="@style/item_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip" >
+
+                <TextView
+                    android:id="@+id/tv_head_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/leak_msg_head_name" />
+
+                <TextView
+                    android:id="@+id/tv_head_count"
+                    style="@style/item_parameter_marginLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_head_name"
+                    android:text="(-)"
+                    android:textColor="@color/leak_msg_head_count" />
+
+                <ImageView
+                    android:id="@+id/iv_head_weidu"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@id/tv_head_count"
+                    android:background="@drawable/dot"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_head_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="某月某日"
+                    android:textColor="@color/leak_msg_head_date" />
+            </RelativeLayout>
+
+            <!-- style="@style/item_width_2" -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp" >
+
+                <RelativeLayout
+                    android:id="@+id/check_relative"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="-15dp"
+                    android:layout_marginTop="7dp"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        android:id="@+id/dc_group_check"
+                        style="@style/MyCheckBox"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:clickable="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_head_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/check_relative"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/leak_msg_head_count" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dc_group_arrow"
+            style="@style/item_image1_marginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arrow"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/louhua_sms_item_divline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="5dip"
+        android:background="@color/leak_msg_head_count" />
+
+    <LinearLayout
+        android:id="@+id/louhua_list_item_botline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:background="@color/leak_msg_content" >
+
+        <View
+            android:id="@+id/simi_home_item_botline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_botline" />
+    </LinearLayout>
+
+</LinearLayout>

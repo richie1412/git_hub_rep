@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="48dip"
+    android:layout_marginRight="48dip"
+    android:background="@drawable/gd_dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="10dip"
+        android:text="选择操作方式"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <include layout="@layout/qg_gray_divider_line" />
+
+    <ListView
+        android:id="@+id/lv_dialog_menu_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/touming"
+        android:divider="@drawable/gd_gray_divider"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dip"
+        android:listSelector="@drawable/blue_menu_press_selector" >
+    </ListView>
+
+</LinearLayout>

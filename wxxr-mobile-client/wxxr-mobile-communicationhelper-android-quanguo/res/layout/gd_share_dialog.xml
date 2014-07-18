@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="30dp"
+    android:background="@drawable/gd_white_bg"
+    android:orientation="vertical" >
+
+    <!-- 标题(文本框) -->
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal"
+        android:text="分享"
+        android:textColor="@color/guishudi_black"
+        android:textSize="@dimen/gd_share_dialog_title_text_size"
+        android:visibility="gone" />
+    <!-- 标题(带icon的复杂标题) -->
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/gd_img_text_dialog_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="电话充值提醒"
+                android:textColor="@color/guishudi_black"
+                android:textSize="@dimen/gd_share_dialog_title_text_size"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_title_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gd_dialog_selector" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/divide_top"
+        layout="@layout/gd_divide_gray" />
+    <!-- 中部内容(分享) -->
+
+    <LinearLayout
+        android:id="@+id/ll_share"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/share_sms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/sms_share"
+            android:gravity="center"
+            android:text="短信"
+            android:textColor="@drawable/gd_share_text_color_selector"
+            android:textSize="@dimen/gd_dialog_it_content_second_title_text_size" />
+
+        <TextView
+            android:id="@+id/share_weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/weixin_share"
+            android:gravity="center"
+            android:text="微信"
+            android:textColor="@drawable/gd_share_text_color_selector"
+            android:textSize="@dimen/gd_dialog_content_text_size" />
+
+        <TextView
+            android:id="@+id/share_weibo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/weibo_share"
+            android:gravity="center"
+            android:text="微博"
+            android:textColor="@drawable/gd_share_text_color_selector"
+            android:textSize="@dimen/gd_dialog_content_text_size" />
+    </LinearLayout>
+    <!-- 中部(充值拦截) -->
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/guishudi_black"
+        android:textSize="@dimen/fontsize_26"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_sms_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingExtra="5dp"
+            android:text="短信内容"
+            android:textColor="@color/guishudi_black"
+            android:textSize="@dimen/gd_share_dialog_content_text_size" />
+
+        <LinearLayout
+            android:id="@+id/ll_sms_sub_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="您可以选择以下操作"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_share_dialog_subs_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:drawableLeft="@drawable/congzhi_call"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="电话充值，呼叫10086，按2再按1"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_share_dialog_subs_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/congzhi_send_sms"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="查询余额，发送101到10086"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_share_dialog_subs_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sub_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:text="本操作仅对广东移动客户有效"
+        android:textColor="@color/gd_setting_text"
+        android:textSize="@dimen/fontsize_26"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/divide_bottom"
+        layout="@layout/gd_divide_gray" />
+    <!-- 底部选择(单个按钮) -->
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal"
+        android:text="取消"
+        android:textColor="@drawable/gd_share_text_color_selector"
+        android:textSize="@dimen/gd_dialog_titlebar_text_size"
+        android:visibility="gone" />
+    <!-- 底部选择(双按钮) -->
+
+    <LinearLayout
+        android:id="@+id/ll_button_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="电话充值"
+            android:textColor="@drawable/gd_share_text_color_selector"
+            android:textSize="@dimen/gd_share_dialog_title_text_size" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/user_authcode_unenable_text"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="查询余额"
+            android:textColor="@drawable/gd_share_text_color_selector"
+            android:textSize="@dimen/gd_share_dialog_title_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

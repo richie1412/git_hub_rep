@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/gd_it_left_btn_bg"
+        android:text="取消"
+        android:textColor="@color/gd_it_dialog_btn_font_selector"
+        android:textSize="@dimen/gd_dialog_btn_text_size" />
+
+    <View
+        android:layout_width="0.5dip"
+        android:layout_height="fill_parent"
+        android:background="@color/gd_dialog_line" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/gd_it_right_btn_bg"
+        android:text="确定"
+        android:textColor="@color/gd_it_dialog_btn_font_selector"
+        android:textSize="@dimen/gd_dialog_btn_text_size" />
+
+</LinearLayout>

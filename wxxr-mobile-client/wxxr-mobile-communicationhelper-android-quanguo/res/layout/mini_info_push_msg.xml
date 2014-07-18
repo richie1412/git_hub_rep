@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/sv_mini_info_push"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/mini_info_lv_margin_left"
+        android:layout_marginRight="@dimen/mini_info_lv_margin_right"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <com.wxxr.callhelper.qg.widget.MyListView
+                    android:id="@+id/lv_mini_msg_push"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/mini_info_lv_margin_top"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+
+            <!-- 底部更多 -->
+
+            <LinearLayout
+                android:id="@+id/ll_mini_info_push_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_down_img" />
+
+                <TextView
+                    android:id="@+id/tv_mini_info_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip"
+                    android:text="更  多"
+                    android:textColor="@color/leak_msg_head_count"
+                    android:textSize="17sp" />
+
+                <!-- 转转转 -->
+
+                <ProgressBar
+                    android:id="@+id/pb_mini_info_push"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_margin="15dip"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/logo_progressbar"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_mini_info_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="您还未收到图文消息哦！"
+         android:textSize="18sp"
+        android:textColor="@color/idea_back_et_hint"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/pb_mini_info_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/mini_pb"
+        android:visibility="gone" />
+
+</RelativeLayout>

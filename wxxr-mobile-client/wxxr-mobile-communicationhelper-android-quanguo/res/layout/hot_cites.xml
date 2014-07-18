@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="#7fcfcfcf"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:text="热门省份"
+        android:textColor="@color/black" />
+
+    <com.wxxr.callhelper.qg.widget.MyListView
+        android:id="@+id/lv_hot_cities"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="45dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray_divider"
+        android:dividerHeight="1dip"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" >
+    </com.wxxr.callhelper.qg.widget.MyListView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="#7fcfcfcf"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:text="全部省份"
+        android:textColor="@color/black" />
+
+</LinearLayout>

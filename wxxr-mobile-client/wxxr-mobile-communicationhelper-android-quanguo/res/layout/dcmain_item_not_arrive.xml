@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gd_callrecord_item_height"
+        android:layout_marginLeft="@dimen/gd_callrecord_item_margin_left"
+        android:layout_marginRight="@dimen/gd_callrecord_item_margin_right"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/gd_iv_private_info_portrait"
+            android:layout_width="@dimen/gd_callrecord_item_portrait_width"
+            android:layout_height="@dimen/gd_callrecord_item_portrait_height"
+            android:background="@drawable/gd_callrecord_item_portrait" />
+
+        <!-- 无头像 -->
+
+        <RelativeLayout
+            android:id="@+id/gd_rl_private_info_portrait"
+            android:layout_width="@dimen/gd_callrecord_item_portrait_width"
+            android:layout_height="@dimen/gd_callrecord_item_portrait_height"
+            android:background="@drawable/gd_item_portrait_empty"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/gd_tv_private_info_portrait_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/gd_callrecord_item_portrait_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/gd_callrecord_item_number_status_margin_left" >
+
+            <!-- 号码，次数，日期 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/gd_callrecord_item_number_margin_top" >
+
+                <TextView
+                    android:id="@+id/tv_head_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陈佳君"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_private_info_item_name_textsize" />
+
+                <RelativeLayout
+                    android:id="@+id/gd_rl_private_info_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gd_private_info_count"
+                    android:gravity="top" >
+
+                    <TextView
+                        android:id="@+id/gd_tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_head_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="某月某日"
+                    android:textColor="@color/gd_callrecord_play_time"
+                    android:textSize="@dimen/gd_private_info_item_date_textsize" />
+            </LinearLayout>
+
+            <!-- 内容,checkbox -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/gd_callrecord_item_number_margin_bottom"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_head_content"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="27日20：1致15989023466（陈佳..."
+                    android:textColor="@color/gd_callrecord_play_time"
+                    android:textSize="@dimen/gd_private_info_item_content_textsize" />
+
+                <CheckBox
+                    android:id="@+id/dc_group_check"
+                    style="@style/GD_MyCheckBox"
+                    android:layout_width="@dimen/gd_callrecord_item_checkbox_width"
+                    android:layout_height="@dimen/gd_callrecord_item_checkbox_height"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 遗弃 -->
+
+    <LinearLayout
+        android:id="@+id/ll_click"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:visibility="gone" >
+
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ll_linear"
+                style="@style/item_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/leak_msg_head_name"
+                    android:textSize="18sp" />
+
+                <TextView
+                    style="@style/item_parameter_marginLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_head_name"
+                    android:text="(-)"
+                    android:textColor="@color/leak_msg_head_count" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="某月某日"
+                    android:textColor="@color/leak_msg_head_count" />
+            </RelativeLayout>
+
+            <!-- style="@style/item_width_2" -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/leak_msg_head_count" />
+
+                <RelativeLayout
+                    android:id="@+id/check_relative"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="7dp"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        style="@style/MyCheckBox"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:clickable="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dc_group_arrow"
+            style="@style/item_image1_marginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arrow"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/simi_home_item_divline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@color/leak_msg_head_count"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/simi_home_item_botline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:background="@color/leak_msg_content"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/simi_home_item_botline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_botline" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="48dip"
+    android:layout_marginRight="48dip"
+    android:background="@drawable/gd_dialog_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dialog_title" />
+
+    <TextView
+        android:id="@+id/tv_alert_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="17dip"
+        android:text="提醒您。。。。。。。"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <include layout="@layout/ok_or_cancel_buttons" />
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gd_callrecord_item_height"
+        android:layout_marginLeft="@dimen/gd_callrecord_item_margin_left"
+        android:layout_marginRight="@dimen/gd_callrecord_item_margin_right"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_head_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="陈佳君"
+            android:textColor="@color/gd_titlebar_text"
+            android:textSize="@dimen/gd_private_contacts_item_name_textsize" />
+
+        <TextView
+            android:id="@+id/gd_tv_telphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gd_private_contacts_telphone_margin_left"
+            android:text="(15353535353)"
+            android:textColor="@color/gd_setting_text"
+            android:textSize="@dimen/gd_private_contacts_item_telphone_textsize"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical" >
+
+            <TextView
+                android:id="@+id/gd_tv_head_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="某月某日"
+                android:textColor="@color/gd_callrecord_play_time"
+                android:textSize="@dimen/gd_private_contacts_item_date_textsize" 
+                android:visibility="gone"/>
+
+            <CheckBox
+                android:id="@+id/dc_group_check"
+                style="@style/GD_MyCheckBox"
+                android:layout_width="@dimen/gd_callrecord_item_checkbox_width"
+                android:layout_height="@dimen/gd_callrecord_item_checkbox_height"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 遗弃 -->
+
+    <RelativeLayout
+        android:id="@+id/ll_simi_click"
+        style="@style/simi_contacts_item_width"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_head_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/check_relative"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible" >
+
+            <CheckBox
+                android:id="@+id/dc_group_check"
+                style="@style/MyCheckBox"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:clickable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/simi_suo_itemdiv"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dip"
+        android:background="@color/leak_msg_head_count"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/list_bot_simi_suo_itemdiv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/leak_msg_content"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/simi_home_item_botline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_botline" />
+    </LinearLayout>
+
+</LinearLayout>

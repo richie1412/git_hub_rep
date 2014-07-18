@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/louhuacishu_title"
+        android:textColor="#5c5b5b"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.wxxr.callhelper.qg.widget.MyListView
+        android:id="@+id/louhuacishu_itemlist"
+        android:layout_width="fill_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        android:background="@drawable/louhuadiv_bk"
+        android:cacheColorHint="@color/touming"
+        android:divider="#ff0000"
+        android:listSelector="@color/touming"
+        android:dividerHeight="0dp"    
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</LinearLayout>

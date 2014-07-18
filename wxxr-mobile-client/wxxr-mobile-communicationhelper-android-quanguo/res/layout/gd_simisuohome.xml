@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_private_lock_auth_margin_left"
+                android:layout_marginRight="@dimen/gd_private_lock_auth_margin_right"
+                android:layout_marginTop="@dimen/gd_private_lock_auth_margin_top" >
+
+                <ImageView
+                    android:id="@+id/temp_simi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gd_simihome_tip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_private_lock_auth_top_text_margin_left"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/temp_simi_tiptop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_top_text_margin_top"
+                        android:text="通信助手私密信息锁"
+                        android:textColor="@color/gd_titlebar_text"
+                        android:textSize="@dimen/gd_private_lock_auth_top_text_size" />
+
+                    <TextView
+                        android:id="@+id/temp_simi_tiptwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_top_second_text_margin_top"
+                        android:text="添加私密联系人后，即建立您和他/她的私密信息，每次进入需要绘制图形锁。"
+                        android:lineSpacingExtra="@dimen/gd_private_lock_auth_top_third_text_margin_top"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_private_lock_auth_top_second_text_size" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- middle -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_private_lock_auth_margin_top"
+                android:background="@drawable/gd_private_lock_auth_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_private_lock_auth_margin_left"
+                    android:layout_marginRight="@dimen/gd_private_lock_auth_margin_right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_middle_margin_top"
+                        android:text="该应用将获取以下授权:"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_private_lock_auth_top_text_size" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_middle_line_margin_top"
+                        android:background="@color/gd_private_lock_middle_bold_line" />
+
+                    <!-- 第一个checkbox -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_first_check_margin_top"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/temp_simi_permission1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gd_simihome_check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/gd_private_lock_auth_check_text_margin_left"
+                            android:lineSpacingExtra="2dp"
+                            android:text="您与私密联系人在手机上的来往短信（包括今后的和历史的）都将仅存储到通信助手私密信箱中。"
+                            android:textColor="@color/gd_titlebar_text"
+                            android:textSize="@dimen/gd_private_lock_auth_top_second_text_size" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_top_second_text_margin_top"
+                        android:background="@color/gd_private_lock_middle_line" />
+
+                    <!-- 第二个checkbox -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_first_check_margin_top"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/temp_simi_permission2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gd_simihome_check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/gd_private_lock_auth_check_text_margin_left"
+                            android:lineSpacingExtra="2dp"
+                            android:text="删除私密联系人时，可选择将私密信息导回手机收件箱。但删除私密信息及卸载客户端，信息直接被永久删除。"
+                            android:textColor="@color/gd_titlebar_text"
+                            android:textSize="@dimen/gd_private_lock_auth_top_second_text_size" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_top_second_text_margin_top"
+                        android:background="@color/gd_private_lock_middle_line" />
+
+                    <!-- 第三个checkbox -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_first_check_margin_top"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/temp_simi_permission3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gd_simihome_check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/gd_private_lock_auth_check_text_margin_left"
+                            android:lineSpacingExtra="2dp"
+                            android:text="为保护私密信息，若您忘记密码，则仅可通过授权邮箱获取校验码，请输入您正确的邮箱地址："
+                            android:textColor="@color/gd_titlebar_text"
+                            android:textSize="@dimen/gd_private_lock_auth_top_second_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_first_check_margin_top"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gd_simihome_check"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/gd_private_lock_auth_check_text_margin_left"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/gd_simihome_inputeemail"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:hint="请输入邮箱"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/gd_titlebar_text"
+                                android:textColorHint="@color/gd_item_thirty"
+                                android:textSize="@dimen/gd_private_lock_auth_top_text_size" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dip"
+                                android:layout_marginTop="@dimen/gd_private_lock_auth_middle_line_margin_top"
+                                android:background="@color/gd_titlebar_text" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginTop="@dimen/gd_private_lock_auth_third_line_margin_top"
+                        android:background="@color/gd_private_lock_middle_line" />
+                </LinearLayout>
+
+                <!-- btn -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gd_private_lock_auth_btn_margin_top"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/gd_simihome_cancle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_private_lock_allow_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textColor="@color/gd_private_lock_auth_btn_text_selector" />
+
+                    <TextView
+                        android:id="@+id/gd_simihome_check_cancle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_private_lock_allow_press"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/gd_simihome_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_private_lock_auth_right_btn_margin_left"
+                        android:background="@drawable/gd_private_lock_allow_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="允许"
+                        android:textColor="@color/gd_private_lock_auth_btn_text_selector" />
+
+                    <TextView
+                        android:id="@+id/gd_simihome_check_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_private_lock_auth_right_btn_margin_left"
+                        android:background="@drawable/gd_private_lock_allow_press"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="允许"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

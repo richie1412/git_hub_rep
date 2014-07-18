@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="@dimen/gd_contacts_item_width"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/alpha"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/gd_contacts_item_letter_height"
+                    android:layout_marginTop="@dimen/gd_contacts_item_letter_margin_top"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:paddingLeft="@dimen/gd_contacts_item_letter_padding_left"
+                    android:text="A"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/gd_private_contacts_add_letter"
+                    android:textSize="@dimen/gd_contacts_item_letter_size" />
+
+                <TextView
+                    android:id="@+id/tv_total_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/gd_contacts_item_total_contacts_margin_right"
+                    android:gravity="bottom"
+                    android:text="位联系人"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_contacts_item_total_size"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/alpha_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gd_contacts_item_content_height" >
+
+          <!--       <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/head"
+                    android:visibility="gone" /> -->
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/gd_contacts_item_name_margin_left"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="大成"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_contacts_item_name_size" />
+
+                <RelativeLayout
+                    android:id="@+id/check_relative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/gd_contacts_item_checkbox_margin_right" >
+
+                    <CheckBox
+                        android:id="@+id/dc_group_check"
+                        style="@style/GD_MyCheckBox"
+                        android:layout_width="@dimen/gd_contacts_more_checkbox_width"
+                        android:layout_height="@dimen/gd_contacts_more_checkbox_height"
+                        android:clickable="true"
+                         />
+                </RelativeLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

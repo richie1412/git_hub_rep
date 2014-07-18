@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/gd_private_contacts_pop_width"
+    android:layout_height="@dimen/gd_private_contacts_pop_height"
+    android:background="@drawable/gd_private_contacts_add_bg"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/rl_contacts_add"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:text="从通讯录添加"
+        android:textColor="@color/gd_private_contacts_pop_text_selector"
+        android:textSize="@dimen/gd_private_contacts_pop_textsize" />
+
+    <View
+        android:id="@+id/simi_send_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/gd_private_contacts_pop_line_margin_top"
+        />
+
+    <TextView
+        android:id="@+id/rl_hand_add"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="输入号码添加"
+        android:textColor="@color/gd_private_contacts_pop_text_selector"
+        android:textSize="@dimen/gd_private_contacts_pop_textsize" />
+
+</LinearLayout>

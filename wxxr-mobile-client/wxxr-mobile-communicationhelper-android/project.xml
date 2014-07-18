@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<project>
+  <extend>${basedir}/../wxxr_build/project.xml</extend>
+  <artifactId>wxxr-mobile-cmast</artifactId>
+  <name>wxxr mobile commuicationhelper</name>
+  <description>wxxr mobile commuicationhelper</description>
+  <shortDescription>wxxr mobile commuicationhelper</shortDescription>
+  <currentVersion>2.2</currentVersion>
+  <dependencies>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/conf</directory>
+				<includes>
+					<include></include>
+				</includes>
+			</resource>
+		</resources>
+
+	</build>
+</project>

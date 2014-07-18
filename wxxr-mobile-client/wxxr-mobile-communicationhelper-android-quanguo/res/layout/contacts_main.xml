@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+      
+
+        <!-- 2.2 -->
+
+        <include layout="@layout/titlebar" />
+
+        <!-- 被嫌弃 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/sousuo_bg"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/rl_get_focus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <EditText
+                    android:id="@+id/EditText01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:hint="联系人搜索"
+                    android:textColor="@color/contacts_search_ziti"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/sousuottt"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/pingdao_dialog_shuru22"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <!-- 中间主要部分 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/lv_list1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/fl_contacts_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ListView
+                    android:id="@+id/list_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:scrollbars="none" />
+
+                <com.wxxr.callhelper.qg.widget.DCMScrollView
+                    android:id="@+id/ll_dc_myscrollview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" />
+                </com.wxxr.callhelper.qg.widget.DCMScrollView>
+            </FrameLayout>
+
+            <com.wxxr.callhelper.qg.widget.MyLetterListView
+                android:id="@+id/MyLetterListView01"
+                android:layout_width="30dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/white" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/contacts_list_shadow"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 底部按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/gd_dialog_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gd_menu_height"
+                android:background="@color/white"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_contacts_cancle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_cancle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取  消"
+                        android:textColor="@color/gd_titlebar_text"
+                        android:textSize="@dimen/gd_menu_text_size" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gd_dialog_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_contacts_sure"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_sure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="确  定"
+                        android:textColor="@color/gd_titlebar_text"
+                        android:textSize="@dimen/gd_menu_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

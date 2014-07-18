@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 个人信息区 -->
+
+            <LinearLayout
+                android:id="@+id/ll_go_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="18dip"
+                android:background="@drawable/gd_single_bg"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp" >
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="@dimen/gd_person_icon_dimen"
+                    android:layout_height="@dimen/gd_person_icon_dimen"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/gd_private_zoo_unlog" />
+                <!-- 已登录 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_logined"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="昵称 ："
+                            android:textColor="@color/guishudi_black"
+                            android:textSize="@dimen/gd_person_item_title_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_nick_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLength="12"
+                            android:text="未知"
+                            android:textColor="@color/guishudi_black"
+                            android:textSize="@dimen/gd_person_item_title_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地区 ："
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/fontsize_30" />
+
+                        <TextView
+                            android:id="@+id/tv_region"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未知"
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/fontsize_30" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电话："
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/fontsize_30" />
+
+                        <TextView
+                            android:id="@+id/tv_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未知"
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/fontsize_30" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 未登录 -->
+
+                <TextView
+                    android:id="@+id/tv_unlogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="未登录"
+                    android:textColor="@color/guishudi_black"
+                    android:textSize="@dimen/gd_person_item_title_text_size"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/gd_go_login" />
+            </LinearLayout>
+
+            <!-- 工具条目 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/gd_single_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_share"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/share_to_friend" />
+
+                    <TextView
+                        style="@style/private_zoo_home_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="分享给朋友" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_mobile_market"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/mobile_market" />
+
+                    <TextView
+                        style="@style/private_zoo_home_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="去 Mobile Market 评分" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gd_go_login" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_check_version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/check_version" />
+
+                    <TextView
+                        style="@style/private_zoo_home_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="新版本检测" />
+
+                    <ImageView
+                        android:id="@+id/iv_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/check_version_new"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_idea_back"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/idea_back" />
+
+                    <TextView
+                        style="@style/private_zoo_home_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="意见反馈" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gd_go_login" />
+                </LinearLayout>
+
+                <include android:id="@+id/ll_apps_recommend_div" layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_apps_recommend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_selector"
+                    android:paddingLeft="10dp"
+                  
+                    android:paddingRight="15dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/app_recomend" />
+
+                    <TextView
+                        style="@style/private_zoo_home_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="移动应用推荐" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gd_go_login" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 隐私条款 -->
+
+            <TextView
+                android:id="@+id/tv_privacy_items"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_person_margin_top"
+                android:gravity="center_horizontal"
+                android:text="通信助手客户端使用条款及隐私政策"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_person_private_item_title_text_size" />
+
+            <include
+                android:id="@+id/no_network"
+                layout="@layout/gd_network_not_access" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

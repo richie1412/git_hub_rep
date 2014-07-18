@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wxxr.callhelper.qg.widget.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_resizediv"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/text_notuse"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <include
+            android:id="@+id/temp_title"
+            layout="@layout/tel_sms_detail_titlebar" />
+
+        <RelativeLayout
+            android:id="@+id/input_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff" >
+
+            <RelativeLayout
+                android:id="@+id/input_area00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/quick_input_item_bk" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/send_text"
+                android:layout_width="@dimen/sms_detail_sendwid"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/sms_detail_sendright"
+                android:layout_marginTop="@dimen/sms_detail_sendbtntop"
+                android:gravity="center"
+                android:text="发 送"
+                android:textColor="@color/gd_detail_sendcolor"
+                android:textSize="@dimen/fontsize_34" />
+
+            <RelativeLayout
+                android:id="@+id/temp_topdiv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="@dimen/sms_detail_sendtop"
+                android:layout_toLeftOf="@id/send_text"
+                android:background="@drawable/sms_detail_quickinput_selitems_bk" >
+
+                <!-- android:background="@drawable/quick_edittext_bk" -->
+
+                <RelativeLayout
+                    android:id="@+id/input_edittext_div"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sms_detail_quickinput_selitems_bk" >
+
+                    <TextView
+                        android:id="@+id/send_text_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/quick_btn" />
+
+                    <EditText
+                        android:id="@+id/input_edittext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/send_text_down"
+                        android:background="@color/transparent"
+                        android:hint="发送短信给..."
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gd_item_thirty"
+                        android:textSize="@dimen/fontsize_30" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/quick_input_pannel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/input_edittext_div"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/sms_detail_qucickinput_left"
+                    android:layout_marginRight="@dimen/sms_detail_qucickinput_right"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/quick_sms"
+                        style="@style/gd_sms_quickinput_item"
+                        android:layout_height="match_parent"
+                        android:text="发短信给他/她"
+                        android:textColor="#828282" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/quick_sms_to_person"
+                        style="@style/gd_sms_quickinput_item"
+                        android:background="@drawable/send_detail_selitem_sel"
+                        android:text="name,与对方联系" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/quick_sms_to_port"
+                        style="@style/gd_sms_quickinput_item"
+                        android:background="@drawable/send_detail_selitem_sel"
+                        android:text="port,互动端口参与互动" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/quick_cancel"
+                        style="@style/gd_sms_quickinput_item"
+                        android:background="@drawable/send_detail_selitem_sel"
+                        android:gravity="center"
+                        android:text="取消" >
+                    </TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/quick_input_empty_line"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/temp_topdiv"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 33333333333 -->
+
+        <ListView
+            android:id="@+id/ll_maincontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:listSelector="@color/white"
+            android:layout_above="@id/input_area"
+            android:layout_below="@id/temp_title"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="0dp" >
+        </ListView>
+    </RelativeLayout>
+
+</com.wxxr.callhelper.qg.widget.ResizeLayout>

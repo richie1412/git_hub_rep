@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+
+<project default="build" xmlns:j="jelly:core" xmlns:m="jelly:maven" xmlns:util="jelly:util" xmlns:ant="jelly:ant">
+
+	<goal name="build" prereqs="init,clean">
+		<j:set var="versionNumber" value="3.0" />
+		<j:set var="versionName" value="ComHelper" />
+		<attainGoal name="gen_version" />
+		<attainGoal name="genapk" />
+	</goal>
+
+	<goal name="gencert">
+		<ant:exec executable="keytool">
+			<arg value="-genkey" />
+			<arg value="-v" />
+			<arg value="-alias" />
+			<arg value="client" />
+			<arg value="-keyalg" />
+			<arg value="RSA" />
+			<arg value="-keysize" />
+			<arg value="512" />
+			<arg value="-sigalg" />
+			<arg value="SHA1withRSA" />
+			<arg value="-validity" />
+			<arg value="36000" />
+			<arg value="-storetype" />
+			<arg value="PKCS12" />
+			<arg value="-keystore" />
+			<arg value="${basedir}/assets/clientlmyr.p12" />
+			<arg value="-dname" />
+			<arg value="CN=lmyr.wxxr.cn ,OU=wxxr,O=wxxr,L=BJ,ST=BJ,C=CN" />
+			<arg value="-storepass" />
+			<arg value="1111111" />
+			<arg value="-keypass" />
+			<arg value="1111111" />
+		</ant:exec>
+	</goal>
+	
+   <goal name="gen_version">
+    <tstamp>
+          <format property="build_time" pattern="yyyyMMddHHMM"/>
+    </tstamp>
+    <tstamp>
+          <format property="build_date" pattern="yyyyMMddHHMM"/>
+    </tstamp>
+      <condition property="buildDate" value="${build_date}">
+        <not><isset property="buildDate"/></not>
+      </condition>
+      <condition property="buildVersion" value="${user.name}${build_time}">
+        <not><isset property="buildVersion"/></not>
+      </condition>
+      <condition property="versionNumber" value="${pom.currentVersion}">
+        <not><isset property="versionNumber"/></not>
+      </condition>
+      <condition property="versionName" value="ComHelper">
+        <not><isset property="versionName"/></not>
+      </condition>
+      <copy file="${basedir}/etc/Version.java" todir="${basedir}/src/com/wxxr/callhelper/qg" overwrite="true">
+        <filterset>
+          <filter token="BUILD_DATE" value="${buildDate}"/>
+          <filter token="BUILD_NUMBER" value="${buildVersion}"/>
+          <filter token="VERSION_NUMBER" value="${versionNumber}"/>
+          <filter token="VERSION_NAME" value="${versionName}"/>
+        </filterset>
+      </copy>
+  </goal>
+	
+
+	<goal name="antgenapk">
+		<j:choose>
+			<echo message="build apk in system ${systemScope['os.name']} " />
+			<j:when test="${systemScope['os.name'].startsWith('Windows')}">
+				<exec executable="ant.bat">
+					<arg line="release" />
+				</exec>
+			</j:when>
+			<j:otherwise>
+				<echo message="execute ant.sh to build apk" />
+				<exec executable="ant.sh">
+					<arg line="release " />
+				</exec>
+			</j:otherwise>
+		</j:choose>
+	</goal>
+	<goal name="genapk">
+		<j:set var="ant_lib_path" value="${maven.repo.local}/ant/jars" />
+		<ant:path id="classpath.maven.run.ref">
+			<ant:pathelement location="${ant_lib_path}/ant-launcher-1.8.2.jar" />
+			<ant:pathelement location="${ant_lib_path}/ant-1.8.2.jar" />
+			<ant:pathelement location="${ant_lib_path}/ant-junit-1.8.2.jar" />
+			<ant:pathelement location="${ant_lib_path}/ant-antlr-1.8.2.jar" />
+			<ant:pathelement location="${java.home}/../lib/tools.jar" />
+		</ant:path>
+		<j:set var="targets" value="${build_targe}" />
+
+		<j:if test="${targets.trim().length() > 0}">
+		     
+		   <tstamp>
+				<format property="TODAY" pattern="yyyyMMddHHMM" locale="en"/>
+    	   </tstamp>
+    	
+
+			<j:forEach var="target_item" items="${targets}">
+				<echo message="+=========================================+" />
+				<echo message="     building target_item begin : ${target_item}    apk" />
+				<echo message="+=========================================+" />
+				<j:set var="server_properties_file" value="./build4ant/${target_item}/server.properties" />
+				<echo message="server.properties target_item : ${server_properties_file}" />
+				<echo message="BuildNumber: ${target_item}_${TODAY}" />
+				<ant:copy file="./build4ant/buildnumber.properties" tofile="${basedir}/assets/buildnumber.properties" overwrite="true" />
+				<replace file="${basedir}/assets/buildnumber.properties">
+					<replacefilter 
+					token="@buildtime@"
+					value="${TODAY}"/>
+					<replacefilter 
+					token="@target@"
+					value="${target_item}"/>
+				</replace>
+				<ant:copy file="${server_properties_file}" tofile="${basedir}/assets/server.properties" overwrite="true" />
+				<ant:java classname="org.apache.tools.ant.launch.Launcher" fork="yes" dir="${ant_lib_path}">
+					<ant:classpath refid="classpath.maven.run.ref" />
+					<ant:arg value="-file" />
+					<ant:arg value="${basedir}/build.xml" />
+				</ant:java>
+				<mkdir dir="${maven.build.dir}/${target_item}" />
+				<ant:copy file="${basedir}/bin/wxxr-mobile-cmast-release.apk" tofile="${maven.build.dir}/${target_item}/wxxr-mobile-cmast.apk" overwrite="true" />
+				<echo message="+=========================================+" />
+				<echo message="     building target_item end : ${target_item}    apk" />
+				<echo message="+=========================================+" />
+
+			</j:forEach>
+		</j:if>
+	</goal>
+
+	
+</project>

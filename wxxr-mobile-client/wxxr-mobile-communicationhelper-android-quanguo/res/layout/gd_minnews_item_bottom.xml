@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_pingdao_item_bottom_selector"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/gd_wzx_item_bottom_icon"
+            android:layout_height="@dimen/gd_wzx_item_bottom_icon"
+            android:background="@drawable/apps_caiyin" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_new_bottom_item_mar_top"
+            android:text="科技频道"
+            android:textColor="@color/guishudi_black"
+            android:textSize="@dimen/gd_news_pingdao_bottom_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

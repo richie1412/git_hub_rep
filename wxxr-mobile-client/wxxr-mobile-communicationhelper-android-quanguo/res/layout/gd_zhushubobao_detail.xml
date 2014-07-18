@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <!-- <ScrollView -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_marginTop="20dp" -->
+    <!-- android:layout_weight="1" > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginTop="15dp" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/gd_weblist_title_icon" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@drawable/zhushbob_icon" > -->
+    <!-- </ImageView> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:layout_marginLeft="10dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/weblist_title" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:text="阅读《明末行》" -->
+    <!-- android:textColor="@color/guishudi_black" -->
+    <!-- android:textSize="@dimen/fontsize_30" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/weblist_content_date" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:gravity="bottom" -->
+    <!-- android:text="11月14日  " -->
+    <!-- android:textColor="@color/gd_setting_text" -->
+    <!-- android:textSize="@dimen/fontsize_26" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/weblist_from" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:text="来自广东移动手机阅读" -->
+    <!-- android:textColor="@color/gd_setting_text" -->
+    <!-- android:textSize="@dimen/fontsize_26" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/weblist_content_abstract" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginTop="15dp" -->
+    <!-- android:text="简介：庞刚回到了悲催的明朝崇祯八年，适逢天下大乱，内有李自成作乱，外有满清入侵，还好他有一本《近代武器百科》，枪炮自己造" -->
+    <!-- android:textColor="@color/guishudi_black" -->
+    <!-- android:textSize="@dimen/fontsize_28" /> -->
+    <!-- 网页链接 -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/ll_web_link" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:text="网页链接" -->
+    <!-- android:textColor="@drawable/gd_web_link_text_color" -->
+    <!-- android:textSize="@dimen/fontsize_20" /> -->
+
+
+    <!-- <View -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="1dp" -->
+    <!-- android:background="@color/gd_detail_sendcolorpress" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/weblist_content_img" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_gravity="center_horizontal" -->
+    <!-- android:background="@drawable/zhushbob_icon" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </ScrollView> -->
+
+    <WebView
+        android:id="@+id/wv"
+        android:layout_width="fill_parent"
+        android:scrollbars="none"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/gd_network_not_access" />
+
+    <include layout="@layout/gd_share_horizontal_bar" />
+
+</LinearLayout>

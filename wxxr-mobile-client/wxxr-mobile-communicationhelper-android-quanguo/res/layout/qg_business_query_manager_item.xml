@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/qg_business_item_bg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/qg_business_manager_item_margin_top"
+        android:paddingLeft="@dimen/qg_business_manager_item_padding_left"
+        android:paddingRight="@dimen/qg_business_manager_item_padding_right" >
+
+        <ImageView
+            android:id="@+id/qg_iv_business_icon"
+            android:layout_width="@dimen/qg_business_manager_item_icon_width"
+            android:layout_height="@dimen/qg_business_manager_item_icon_height"
+            android:background="@drawable/qg_business_item_icon" />
+
+        <TextView
+            android:id="@+id/qg_tv_business_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qg_business_manager_item_icon_margin_left"
+            android:layout_weight="1"
+            android:text="本机号码账户余额"
+            android:textColor="@color/gd_titlebar_text"
+            android:textSize="@dimen/qg_business_manager_item_title_text_size" />
+
+        <Button
+            android:id="@+id/qg_btn_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/qg_business_item_btn_selector"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/qg_business_manager_item_btn_text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/qg_tv_business_item_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/qg_business_manager_detail_margin_left"
+        android:layout_marginTop="@dimen/qg_business_manager_item_description_margin_top"
+        android:textColor="@color/gd_setting_text"
+        android:textSize="@dimen/qg_business_manager_item_description_text_size" 
+        android:visibility="gone"/>
+
+</LinearLayout>

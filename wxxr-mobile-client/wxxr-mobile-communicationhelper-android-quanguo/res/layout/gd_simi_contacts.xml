@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gd_ll_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/gd_private_lock_btn_height" >
+
+            <!-- 私密信息 -->
+
+            <RelativeLayout
+                android:id="@+id/gd_rl_private_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/gd_tv_private_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="私密信息"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_private_lock_btn_text_size" />
+
+                <View
+                    android:id="@+id/gd_view_private_info_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/gd_private_lock_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gd_private_lock_text_press" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.1dip"
+                android:layout_height="fill_parent"
+                android:background="@color/gd_private_lock_btn_bottom_line" />
+
+            <!-- 私密联系人 -->
+
+            <RelativeLayout
+                android:id="@+id/gd_rl_private_contacts"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/gd_tv_private_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="私密联系人"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_private_lock_btn_text_size" />
+
+                <View
+                    android:id="@+id/gd_view_private_contacts_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/gd_private_lock_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/gd_private_lock_btn_bottom_line" />
+
+        <LinearLayout
+            android:id="@+id/gd_ll_private_lock_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</LinearLayout>

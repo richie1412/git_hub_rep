@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/leak_session_bg"
+        android:orientation="vertical" >
+
+        <!-- 漏话顶部 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_titlebar_deep_bg" >
+
+            <!-- 漏接电话 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_ls_message"
+                android:layout_width="fill_parent"
+                android:layout_height="67dp"
+                android:layout_weight="1"
+                android:background="@drawable/leak_session_selected"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_ls_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="漏接电话"
+                    android:textColor="@color/leak_session_selected"
+                    android:textSize="26sp" />
+            </RelativeLayout>
+
+            <!-- 漏话次数 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_ls_count"
+                android:layout_width="fill_parent"
+                android:layout_height="67dp"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_ls_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="漏接次数"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 漏话主体 -->
+
+        <LinearLayout
+            android:id="@+id/ll_body"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

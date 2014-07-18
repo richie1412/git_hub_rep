@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.wxxr.callhelper.qg.widget.BottomTabBar
+        android:id="@+id/home_bottom_tabbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+        <LinearLayout
+	        android:id="@+id/rl_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/home_bottom_tabbar"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <include layout="@layout/titlebar" />
+
+            <LinearLayout
+                android:id="@+id/ll_callrecord_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/leak_msg_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <ListView
+                    android:id="@+id/lv_callrecord"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:cacheColorHint="@color/white"
+                    android:divider="@color/gd_item_line"
+                    android:dividerHeight="@dimen/gd_lv_line_height"
+                    android:fadingEdge="none"
+                    android:listSelector="@color/white"
+                    android:scrollbars="none"
+                    android:scrollingCache="false" />
+
+                <!-- seekbar灰框 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_sb_callrecord"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/gd_callrecord_sb_height"
+                    android:background="@drawable/callrecorder_seekbar_bg"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_play_time_margin_left"
+                        android:layout_marginTop="@dimen/gd_play_time_margin_top" >
+
+                        <TextView
+                            android:id="@+id/gd_tv_callrecord_current_position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00&apos;00&apos;&apos;"
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/gd_play_time_text_size" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/gd_play_time_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_callrecord_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00&apos;&apos;00"
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/gd_play_time_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/gd_seekbar_margin_left"
+                        android:paddingRight="@dimen/gd_seekbar_margin_right"
+                        android:paddingTop="@dimen/gd_seekbar_margin_top" >
+
+                        <!-- com.wxxr.callhelper.widget.MySeekBar -->
+
+                        <SeekBar
+                            android:id="@+id/sb_callrecord"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:progressDrawable="@drawable/seek_bg"
+                            android:thumb="@drawable/gd_callrecord_thumb"
+                            android:thumbOffset="0dip" 
+                            />
+
+                        <ImageView
+                            android:id="@+id/gd_iv_seekbar_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/gd_seekbar_pause_margin_left"
+                            android:background="@drawable/gd_seekbar_pause" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- menu空白处 -->
+
+                <LinearLayout
+                    android:id="@+id/gd_ll_menu_space"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/gd_menu_height"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_callrecord_empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/gd_callrecord_empty_margin_top"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您还没有通话录音记录"
+                    android:textColor="@color/gd_setting_text"
+                    android:textSize="@dimen/gd_callrecord_empty_text_size" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gd_callrecord_empty_content_margin_top"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机通话时，点击通话界面"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_callrecord_empty_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_callrecord_empty_img_left_margin"
+                        android:layout_marginRight="@dimen/gd_callrecord_empty_img_right_margin"
+                        android:background="@drawable/gd_callrecord_empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="启动录音。"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_callrecord_empty_text_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gd_callrecord_empty_content_margin_top"
+                    android:text="通话结束后本页面生成录音记录。"
+                    android:textColor="@color/gd_setting_text"
+                    android:textSize="@dimen/gd_callrecord_empty_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

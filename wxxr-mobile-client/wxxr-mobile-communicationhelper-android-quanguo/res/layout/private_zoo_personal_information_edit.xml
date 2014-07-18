@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="wrap_content"
+        layout="@layout/private_zoo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 头像 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/item_text_information_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="头像" />
+
+            <LinearLayout
+                android:layout_width="115dip"
+                android:layout_height="115dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dip"
+                android:background="@drawable/private_zoo_default_head"
+                android:orientation="vertical"
+                android:padding="3dip" >
+
+                <ImageView
+                    android:id="@+id/iv_private_zoo_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/private_zoo_default_head"
+                    android:scaleType="fitXY"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/private_zoo_item_divider" />
+        <!-- 昵称 -->
+
+        <LinearLayout
+            android:id="@+id/ll_private_zoo_nick_name"
+            style="@style/item_height"
+            android:layout_width="fill_parent"
+            android:background="@drawable/private_zoo_item_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_text_information_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称" />
+
+            <EditText
+                android:id="@+id/et_private_zoo_nick_name"
+                style="@style/item_text_information_right"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="30dip"
+                android:background="@null"
+                android:hint="请输入1-6个字的昵称"
+                android:textColor="@color/black"
+                android:textColorHint="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <include layout="@layout/private_zoo_item_divider" />
+        <!-- 性别 -->
+
+        <LinearLayout
+            android:id="@+id/ll_private_zoo_gender"
+            style="@style/item_height"
+            android:layout_width="fill_parent"
+            android:background="@drawable/private_zoo_item_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/item_text_information_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/tv_private_zoo_gender"
+                style="@style/item_text_information_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="请选择性别"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <include layout="@layout/private_zoo_item_divider" />
+        <!-- 年龄 -->
+
+        <LinearLayout
+            android:id="@+id/ll_private_zoo_age"
+            style="@style/item_height"
+            android:layout_width="fill_parent"
+            android:background="@drawable/private_zoo_item_seletor"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/item_text_information_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄" />
+
+            <TextView
+                android:id="@+id/tv_private_zoo_age"
+                style="@style/item_text_information_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入出生年月日" />
+        </LinearLayout>
+
+        <include layout="@layout/private_zoo_item_divider" />
+        <!-- 地区 -->
+
+        <LinearLayout
+            android:id="@+id/ll_private_zoo_region"
+            style="@style/item_height"
+            android:layout_width="fill_parent"
+            android:background="@drawable/private_zoo_item_seletor"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/item_text_information_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地区" />
+
+            <TextView
+                android:id="@+id/tv_private_zoo_region"
+                style="@style/item_text_information_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入手机号码所在省份"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <include layout="@layout/private_zoo_item_divider" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/private_zoo_icon_title_bg" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="未登录" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/private_zoo_home_edit_seletor" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登录既获2元话费"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/aboutus_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 中部 -->
+
+    <TextView
+        android:id="@+id/tv_private_zoo_share_to_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推荐给朋友"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_private_zoo_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去MoblieMaket评分"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_private_zoo_update_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="版本更新"
+        android:textColor="@color/black" />
+
+</LinearLayout>

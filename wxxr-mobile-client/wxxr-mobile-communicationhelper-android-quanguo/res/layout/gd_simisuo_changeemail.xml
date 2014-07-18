@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <TextView
+        android:id="@+id/gd_simisuo_nowemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/gd_private_email_margin_top"
+        android:text="邮箱"
+        android:textColor="@color/gd_titlebar_text"
+        android:textSize="@dimen/gd_private_email_text_size" />
+
+    <EditText
+        android:id="@+id/gd_simisuo_newemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/gd_private_email_edittext_margin_top"
+        android:background="@null"
+        android:hint="请输入新邮箱地址"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/gd_titlebar_text_half"
+        android:textColor="@color/gd_titlebar_text"
+        android:textSize="@dimen/gd_private_email_text_size"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/gd_dialog_it_margin_left"
+        android:layout_marginRight="@dimen/gd_dialog_it_margin_right"
+        android:layout_marginTop="@dimen/gd_private_email_line_margin_top"
+        android:background="@color/gd_titlebar_text" />
+
+</LinearLayout>

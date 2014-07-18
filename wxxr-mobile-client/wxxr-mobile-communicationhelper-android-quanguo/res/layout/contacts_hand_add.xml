@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical" >
+
+        <!-- 上部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/gd_iv_titlebar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:background="@drawable/dialog_add_new_contact" />
+
+            <TextView
+                android:id="@+id/tv_dialog_top"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_text_margin_left"
+                android:layout_weight="1"
+                android:text="手动添加联系人"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_titlebar_text_size" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vi_private_zoo_tanchukuang_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/gd_dialog_line"
+            android:visibility="visible" />
+
+        <!-- 中部分 -->
+
+
+        <!-- 手动添加私密联系人 -->
+
+        <LinearLayout
+            android:id="@+id/gd_ll_hand_add_contacts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_dialog_hand_add_et_margin_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <EditText
+                android:id="@+id/et_add_telnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="请输入手机号码"
+                android:inputType="number"
+                android:textColor="@color/gd_titlebar_text"
+                android:textColorHint="@color/gd_callrecord_play_time"
+                android:textSize="@dimen/gd_dialog_content_text_size" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="@dimen/gd_dialog_content_second_margin_bottom"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:layout_marginRight="@dimen/gd_dialog_titlebar_close_margin_right"
+                android:background="@color/gd_titlebar_text" />
+        </LinearLayout>
+
+        <!-- 下部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_btn_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_it_left_btn_bg"
+                android:text="取消"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_btn_text_size" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/gd_dialog_line" />
+
+            <Button
+                android:id="@+id/btn_dialog_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_it_right_btn_bg"
+                android:text="确定"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_btn_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

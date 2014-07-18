@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/congzhi_empty_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gd_lh_hz_empty_text_margin_left"
+        android:layout_marginTop="@dimen/gd_lh_hz_empty_first_text_margin_top"
+        android:text="您暂时未收到充值提醒短信"
+        android:textColor="@color/gd_setting_text"
+        android:textSize="@dimen/gd_lh_hz_empty_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gd_lh_hz_empty_text_margin_left"
+        android:layout_marginTop="@dimen/gd_lh_hz_empty_second_text_margin_top"
+        android:text="10086电话充值，不管何时何地帮您轻松充值"
+        android:textColor="@color/gd_setting_text"
+        android:textSize="@dimen/gd_lh_hz_empty_text_size" />
+
+    <Button
+        android:id="@+id/btn_empty_recharg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/gd_lh_hz_empty_btn_margin_right"
+        android:layout_marginTop="@dimen/gd_lh_hz_empty_btn_margin_top"
+        android:background="@drawable/gd_lh_hz_empty_btn_selector"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="进行电话充值"
+        android:textColor="@color/white"
+        android:textSize="@dimen/gd_lh_hz_empty_text_size" />
+
+</LinearLayout>

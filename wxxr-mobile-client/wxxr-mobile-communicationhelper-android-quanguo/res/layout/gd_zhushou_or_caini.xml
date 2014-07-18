@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gd_pingdao_pop"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_zsbb"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="助手播报"
+        android:textColor="@drawable/gd_pingdao_text_color"
+        android:textSize="@dimen/fontsize_34" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#177dd2" />
+
+    <TextView
+        android:id="@+id/tv_cnxh"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="猜你喜欢"
+        android:textColor="@drawable/gd_pingdao_text_color"
+        android:textSize="@dimen/fontsize_34" />
+    
+      <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#177dd2" />
+
+    <TextView
+        android:id="@+id/tv_gypd"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="公益播报"
+        android:textColor="@drawable/gd_pingdao_text_color"
+        android:textSize="@dimen/fontsize_34" />
+
+</LinearLayout>

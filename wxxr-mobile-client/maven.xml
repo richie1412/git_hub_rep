@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<project default="build"
+  xmlns:j="jelly:core"
+  xmlns:i="jelly:interaction"
+  xmlns:r="release:transform"
+  xmlns:c="changes:transform"
+  xmlns:log="jelly:log"
+  xmlns:ant="jelly:ant"
+  xmlns:doc="doc"
+  xmlns:artifact="artifact"
+  xmlns:util="jelly:util"
+  xmlns:maven="jelly:maven">
+
+  <goal name="build" prereqs="init">
+  <!--
+  		<maven:reactor 
+			basedir="${basedir}/../" 
+			includes="wxxr_provisioning/project.xml" 
+			postProcessing="true" 
+			goals="build" 
+			banner="Building JBOSS " 
+			ignoreFailures="false"/>
+-->
+	  <j:set var="maven.multiproject.site.goals" value="clean,build" />
+	  <j:set var="maven.multiproject.basedir" value="${basedir}/" />
+	  <j:set var="maven.multiproject.includes" value=""/>     
+	  <j:set var="maven.multiproject.artifacts" value=""/>     
+	  <j:forEach var="dep_project" items="${projects}">
+		<j:set var="maven.multiproject.includes" value="${dep_project}/project.xml,${maven.multiproject.includes}"/>     
+	  </j:forEach>
+	  <attainGoal name="wxxr:clean_multi_build"/>
+      <maven:reactor
+        basedir="${maven.multiproject.basedir}"
+        banner="Build core framework component ..."
+        includes="${maven.multiproject.includes}"
+        excludes="${maven.multiproject.excludes}"
+        postProcessing="true"
+        goals="clean,build"
+        collectionVar="multiprojects"
+        ignoreFailures="false"
+      />
+	  
+  </goal>
+
+  <goal name="alleclipse">
+	  <j:set var="maven.multiproject.includes" value=""/>   
+	  <j:forEach var="dep_project" items="${projects}">
+		<j:set var="maven.multiproject.includes" value="${dep_project}/project.xml,${maven.multiproject.includes}"/>     
+	  </j:forEach>
+  		<maven:reactor 
+			basedir="${basedir}/" 
+			includes="${maven.multiproject.includes}" 
+			postProcessing="true" 
+			goals="eclipse" 
+			banner="Create Eclipse project environment ..." 
+			ignoreFailures="false">
+			<maven:contextVariable var="root_base_dir" value="test dir"/>
+		</maven:reactor>
+  </goal>
+
+  <goal name="allbuild">
+	  <j:set var="maven.multiproject.includes" value=""/>   
+	  <j:forEach var="dep_project" items="${projects}">
+		<j:set var="maven.multiproject.includes" value="${dep_project}/project.xml,${maven.multiproject.includes}"/>     
+	  </j:forEach>
+  		<maven:reactor 
+			basedir="${basedir}/" 
+			includes="${maven.multiproject.includes}" 
+			postProcessing="true" 
+			goals="clean,build" 
+			banner="Building JBOSS ..." 
+			ignoreFailures="false"/>
+  </goal>
+
+  <goal name="install" >
+  </goal>
+
+</project>

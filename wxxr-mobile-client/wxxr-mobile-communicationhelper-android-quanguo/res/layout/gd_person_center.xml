@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <!-- 上部分 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="@dimen/gd_news_pingdao_margin_top"
+                android:background="@drawable/gd_single_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/private_zoo_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="头像" />
+
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/gd_person_icon_dimen"
+                        android:layout_height="@dimen/gd_person_icon_dimen"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/gd_private_zoo_unlog" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_nick_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/private_zoo_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="昵称" />
+
+                    <TextView
+                        android:id="@+id/tv_nick_name"
+                        style="@style/private_zoo_text_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="点击设置" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_telnum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/private_zoo_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="手机号码" />
+
+                    <TextView
+                        android:id="@+id/tv_telnum"
+                        style="@style/private_zoo_text_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="未知" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 下部分 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/gd_single_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_gendar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/private_zoo_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="性别" />
+
+                    <TextView
+                        android:id="@+id/tv_gendar"
+                        style="@style/private_zoo_text_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击选择" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_age"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/private_zoo_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="年龄" />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        style="@style/private_zoo_text_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击选择" />
+                </LinearLayout>
+
+                <include layout="@layout/gd_private_zoo_divide_gray" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_region"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/list_item_selector"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/private_zoo_text_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="地区" />
+
+                    <TextView
+                        android:id="@+id/tv_region"
+                        style="@style/private_zoo_text_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击选择" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 退出登录 -->
+
+            <Button
+                android:id="@+id/btn_exite"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/gd_login_selector"
+                android:text="退出登录"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

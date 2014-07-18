@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/app_icon_big" />
+    <!-- 登录输入框 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/gd_single_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/gd_tel_icon" />
+
+            <EditText
+                android:id="@+id/et_tel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="11位手机号"
+                android:inputType="phone"
+                android:paddingLeft="20dp"
+                android:textColor="@color/guishudi_black"
+                android:textColorHint="#b8b8b8"
+                android:textSize="@dimen/fontsize_30" />
+        </LinearLayout>
+
+        <include layout="@layout/gd_private_zoo_divide_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gd_key_icon" />
+
+            <EditText
+                android:id="@+id/et_dynamic_pwd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="6位短信动态密码"
+                android:inputType="textPassword"
+                android:paddingLeft="20dp"
+                android:textColor="@color/guishudi_black"
+                android:textColorHint="#b8b8b8"
+                android:textSize="@dimen/fontsize_30" />
+
+            <!-- <com.wxxr.callhelper.widget.CountTextView -->
+            <!-- android:id="@+id/ctv" -->
+            <!-- android:layout_width="100dip" -->
+            <!-- android:layout_height="30dip" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:background="@drawable/private_zoo_dynamic_pwd" -->
+            <!-- android:text="获取动态密码" -->
+            <!-- android:textColor="@color/white" > -->
+            <!-- </com.wxxr.callhelper.widget.CountTextView> -->
+
+            <Button
+                android:id="@+id/ctv"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/gd_get_pwd_unclick"
+                android:text="获取动态密码"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 登录按钮 -->
+
+    <Button
+        android:padding="10dp"
+        android:id="@+id/btn_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gd_login_green_selector"
+        android:text="登录账号"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <!-- 隐私条款和政策 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_agreen_item"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/gd_private_zoo_agreen_seletor"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:text="已阅读并同意"
+            android:textColor="@color/guishudi_black"
+            android:textSize="@dimen/fontsize_28" />
+
+        <LinearLayout
+            android:id="@+id/ll_privacy_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用条款和隐私政策"
+                android:textColor="#e46600"
+                android:textSize="@dimen/fontsize_28" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#e46600" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

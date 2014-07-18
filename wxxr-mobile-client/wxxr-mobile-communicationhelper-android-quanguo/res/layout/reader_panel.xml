@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_leak_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/leak_msg_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_leak_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar_bg"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/leak_tab1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/leak_text_tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="漏接电话"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="3dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/leak_msg_stand_line" />
+
+        <RelativeLayout
+            android:id="@+id/leak_tab2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/leak_text_tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="漏接次数"
+                android:textColor="@color/leak_msg_bg"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 顶端两条线 -->
+
+    <LinearLayout
+          android:id="@+id/ll_leak_title_divline"
+        android:layout_width="fill_parent"   
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip" >
+
+        <View
+            android:id="@+id/v_left"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_marginRight="15dip"
+            android:layout_weight="1"
+            android:background="@color/leak_msg_line" />
+
+        <View
+            android:id="@+id/v_right"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:background="@color/leak_msg_line"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ll_leak_title_divline2"       
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@color/leak_msg_line" />
+    
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/leak_msg_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_main_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_main_content"
+            android:background="@drawable/list_down_img"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb_mini_info2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           	android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/mini_pb"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

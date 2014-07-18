@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/push_msg_dialog_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- new推送对话框 -->
+
+    <LinearLayout
+        android:id="@+id/rl_new_push_msg_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <!-- new top -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/gd_dialog_titlebar_height"
+            android:background="@drawable/gd_dialog_titlebar_bg" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/gd_dialog_it_margin_left"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gd_img_text_dialog_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_dialog_it_titlebar_margin_left"
+                    android:text="通信助手"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_dialog_it_titlebar_text_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_push_msg_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gd_dialog_it_margin_right"
+                android:background="@drawable/gd_dialog_it_close_selector" />
+        </RelativeLayout>
+
+        <!-- content -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/gd_dialog_it_margin_left"
+            android:layout_marginRight="@dimen/gd_dialog_it_margin_right"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_push_sms_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gd_dialog_it_content_margin_bottom"
+                android:layout_marginTop="@dimen/gd_dialog_it_content_margin_top"
+                android:text="15989023466(陈佳君)"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_it_content_text_size" />
+
+            <!-- 普通内容部分 -->
+
+            <LinearLayout
+                android:id="@+id/gd_ll_old_dialog_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_it_dialog_content_bg_selector"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_tel_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/gd_dialog_it_content_margin"
+                    android:text="细数欧洲五星球场："
+                    android:textColor="@color/gd_setting_text"
+                    android:textSize="@dimen/gd_dialog_it_content_info_text_size" />
+            </LinearLayout>
+
+            <!-- 图文内容部分 -->
+
+            <LinearLayout
+                android:id="@+id/ll_push_msg_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_it_dialog_content_bg_selector"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/gd_dialog_it_new_content_margin" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/iv_push_msg_img"
+                            android:layout_width="@dimen/gd_dialog_it_content_img_width"
+                            android:layout_height="@dimen/gd_dialog_it_content_img_height"
+                            android:background="@drawable/gd_it_dialog_content_img" />
+
+                        <TextView
+                            android:id="@+id/tv_mini_info_push_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/gd_dialog_it_new_second_content_margin_top"
+                            android:text="11月05日09:44"
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/gd_dialog_it_new_content_datetime_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_dialog_it_new_content_text_margin_left"
+                        android:layout_marginTop="-3dip"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_push_msg_content_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="蠕虫病毒25周年"
+                            android:textColor="@color/gd_titlebar_text"
+                            android:textSize="@dimen/gd_dialog_it_content_second_title_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_push_msg_content_abstrct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/gd_dialog_it_new_second_content_margin_top"
+                            android:text="1988年11月2日康奈尔大学研究生..."
+                            android:textColor="@color/gd_setting_text"
+                            android:textSize="@dimen/gd_dialog_it_new_content_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- btn -->
+
+        <LinearLayout
+            android:layout_width="@dimen/qg_dialog_it_btn_weight"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_dialog_it_btn_margin_top" >
+
+            <Button
+                android:id="@+id/gd_btn_new_dialog_reply_sms"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/qg_moment_reply_call_left"
+                android:text="回短信"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_it_btn_text_size" />
+
+            <View
+                android:id="@+id/qg_btn_middle_line"
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/gd_dialog_line"
+                 />
+
+            <Button
+                android:id="@+id/qg_btn_new_dialog_moment_reply_call"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/qg_moment_reply_call"
+                android:layout_weight="1"
+                android:text="稍后回电"
+                android:textStyle="bold"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_it_btn_text_size"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/gd_btn_new_dialog_reply_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/qg_moment_reply_call_right"
+                android:text="回电话"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_it_btn_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bt_sms_relative"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/smsdc_input_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/bt_sms_content"
+        android:layout_width="0dip"
+        android:layout_height="44dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/smsdc_input_kuang"
+        android:paddingLeft="5dp" />
+
+    <Button
+        android:textSize="20sp"
+        android:id="@+id/bt_sms_send"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/sms_send_button_selector"
+        android:text="发送"
+        android:textColor="@color/black" />
+
+</LinearLayout>

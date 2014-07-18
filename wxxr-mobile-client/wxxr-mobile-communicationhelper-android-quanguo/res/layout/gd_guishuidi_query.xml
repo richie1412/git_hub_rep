@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.wxxr.callhelper.qg.widget.BottomTabBar
+        android:id="@+id/home_bottom_tabbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/home_bottom_tabbar"
+        android:orientation="vertical" >
+
+        <include layout="@layout/titlebar" />
+        <!-- 主体部分 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <TextView
+                style="@style/guishudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/guishuidi_hand_query"
+                android:text="手工查询" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/gd_white_corner_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingBottom="@dimen/gd_mobile_query_item_padding_top_bottom"
+                    android:paddingLeft="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingRight="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingTop="@dimen/gd_mobile_query_item_padding_top_bottom" >
+
+                    <EditText
+                        android:id="@+id/et_input_number"
+                        style="@style/guishudi_lable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:hint="请输入手机号码或者区号"
+                        android:inputType="phone"
+                        android:paddingLeft="0dp"
+                        android:textColorHint="#7f828282" />
+
+                    <Button
+                        android:id="@+id/btn_guishudi_query"
+                        style="@style/query_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/guishudi_btn_selector"
+                        android:clickable="false"
+                        android:text="查询" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#f2f2f2" />
+
+                <TextView
+                    android:id="@+id/tv_guishudi"
+                    style="@style/guishudi_lable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="归属地信息"
+                    android:textColor="@color/gd_callrecord_play_time" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/guishudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:drawableLeft="@drawable/guishudi_setting"
+                android:text="功能设置" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/gd_white_corner_bg"
+                android:paddingBottom="@dimen/gd_mobile_query_item_padding_top_bottom"
+                android:paddingLeft="@dimen/gd_mobile_query_item_padding_left_right"
+                android:paddingRight="@dimen/gd_mobile_query_item_padding_left_right"
+                android:paddingTop="@dimen/gd_mobile_query_item_padding_top_bottom" >
+
+                <TextView
+                    style="@style/guishudi_balck"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="显示号码归属地" />
+
+                <Button
+                    android:id="@+id/btn_guishuidi_switch"
+                    style="@style/switch_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/gd_setting_switch_open" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/subdescription_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:text="开启后，手机通话界面中，将显示号码归属地" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

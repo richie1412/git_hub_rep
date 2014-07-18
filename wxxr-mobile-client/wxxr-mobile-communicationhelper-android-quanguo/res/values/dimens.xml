@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="popmenu_width">230.0dip</dimen>
+    <dimen name="popmenu_yoff">5.0dip</dimen>
+    <dimen name="dip2pix">1.0dip</dimen>
+    <dimen name="blade_view_text_size">13sp</dimen>
+    <dimen name="list_view_horizontal_padding">12.5dip</dimen>
+    <dimen name="list_view_item_horizontal_padding">7.5dip</dimen>
+    <dimen name="dialog_activity_horizontal_margin">48dip</dimen>
+</resources>

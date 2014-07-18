@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_top_titlebar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/titlebar_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gd_titlebar_height"
+        android:layout_marginLeft="@dimen/gd_titlebar_left_margin_left"
+        android:layout_marginRight="@dimen/gd_titlebar_right_margin_right"
+        android:gravity="center_vertical" >
+
+        <!-- 返回 -->
+
+        <ImageView
+            android:id="@+id/gd_iv_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_titlebar_left_selector" />
+
+        <!-- 标题栏 -->
+
+        <TextView
+            android:id="@+id/tv_titlebar_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="标题栏"
+            android:textColor="@color/gd_titlebar_text"
+            android:textSize="@dimen/gd_titlebar_text_size" />
+        <!-- android:textStyle="bold" -->
+
+
+        <!-- 下一步 -->
+
+        <ImageView
+            android:id="@+id/gd_iv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_title_right_selector" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:background="@color/leak_msg_bg"
+        android:visibility="gone" />
+
+</LinearLayout>

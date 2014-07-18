@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <!-- 上部分 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gd_hz_channel_margin_left"
+        android:layout_marginTop="@dimen/gd_hz_channel_top_margin_top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_channel_notebook_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_hz_channel_top_margin_left"
+                android:text="点击勾选，即定制频道，优先接收此类资讯;"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_hz_channel_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_hz_channel_second_margin_top"
+            android:text="再次点击，取消勾选，退订该频道。"
+            android:textColor="@color/gd_titlebar_text"
+            android:textSize="@dimen/gd_hz_channel_text_size" />
+    </LinearLayout>
+
+    <!-- 中部分 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gd_hz_channel_margin_left"
+        android:layout_marginTop="@dimen/gd_hz_channel_middle_margin_top"
+        android:visibility="visible" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:background="@color/huizhi_tanchukuang"
+            android:flipInterval="20"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/gd_ll_channel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ProgressBar
+            android:id="@+id/pb_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/mini_pb"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- 被嫌弃 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/titlebar_bg"
+        android:gravity="center_vertical|left"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:paddingLeft="10dp"
+            android:text="定制频道"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/huizhi_tanchukuang"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="点击勾选频道按钮,定制该频道,再次点击取消勾选即可退订该频道(多选)"
+            android:textColor="@color/huizhi_dialog_ziti"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@color/huizhi_tanchukuang"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/gallery_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/huizhi_tanchukuang"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/pindaodingzhi_close_bk"
+            android:gravity="center"
+            android:text="关   闭"
+            android:textColor="#bdbdc5"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

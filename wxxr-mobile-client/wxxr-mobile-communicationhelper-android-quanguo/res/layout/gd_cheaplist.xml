@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout       android:layout_below="@id/titlebar"  android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    
+    <include    
+        android:id="@+id/no_network"  
+        layout="@layout/gd_network_not_access"
+        android:visibility="gone">
+    </include>
+
+    <ListView
+        android:id="@+id/gd_cheaplist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+        android:divider="@color/transparent"
+        android:dividerHeight="1dip"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:layout_below="@id/titlebar" />
+</LinearLayout>
+    <ProgressBar
+        android:id="@+id/processbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/mini_pb"
+        android:visibility="gone" />
+
+</RelativeLayout>

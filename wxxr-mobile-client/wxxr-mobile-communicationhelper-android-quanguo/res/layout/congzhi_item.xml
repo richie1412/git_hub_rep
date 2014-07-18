@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_selector"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gd_callrecord_item_height"
+        android:layout_marginLeft="@dimen/gd_callrecord_item_margin_left"
+        android:layout_marginRight="@dimen/gd_callrecord_item_margin_right"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/iv_type"
+            android:layout_width="@dimen/gd_callrecord_item_portrait_width"
+            android:layout_height="@dimen/gd_callrecord_item_portrait_height"
+            android:background="@drawable/gd_callrecord_item_portrait" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/gd_callrecord_item_number_status_margin_left" >
+
+            <!-- 号码，次数，日期 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/gd_callrecord_item_number_margin_top"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类型未知"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_callrecord_item_number_size" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="(5)"
+                    android:textColor="@color/gd_callrecord_play_time"
+                    android:textSize="@dimen/gd_callrecord_item_duration_size"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="某月某日"
+                    android:textColor="@color/gd_callrecord_play_time"
+                    android:textSize="@dimen/gd_callrecord_item_duration_size" />
+            </LinearLayout>
+
+            <!-- 内容,checkbox -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/gd_callrecord_item_number_margin_bottom"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="27日20：1致15989023466（陈佳..."
+                    android:textColor="@color/gd_callrecord_play_time"
+                    android:textSize="@dimen/gd_callrecord_item_duration_size" />
+
+                <CheckBox
+                    android:id="@+id/dc_check"
+                    style="@style/GD_MyCheckBox"
+                    android:layout_width="@dimen/gd_callrecord_item_checkbox_width"
+                    android:layout_height="@dimen/gd_callrecord_item_checkbox_height"
+                    android:paddingLeft="50dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/louhua_sms_item_divline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="5dip"
+        android:background="@color/leak_msg_head_count"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/louhua_list_item_botline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:background="@color/leak_msg_content"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/simi_home_item_botline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_botline" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical" >
+
+        <!-- 上部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/gd_iv_titlebar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:background="@drawable/gd_dialog_icon" />
+
+            <TextView
+                android:id="@+id/tv_dialog_top"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_text_margin_left"
+                android:layout_weight="1"
+                android:text="提示"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_titlebar_text_size" />
+
+            <ImageView
+                android:id="@+id/gd_iv_dialog_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/gd_dialog_titlebar_close_margin_right"
+                android:background="@drawable/gd_dialog_it_close_selector"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 删除文本 -->
+
+        <LinearLayout
+            android:id="@+id/gd_ll_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gd_dialog_content_margin_bottom"
+            android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+            android:layout_marginTop="@dimen/gd_dialog_content_margin_top"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tv_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否删除？"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_content_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 被嫌弃 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <!-- 上部分 -->
+
+        <LinearLayout
+            android:id="@+id/alert_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/alert_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dip"
+                android:maxHeight="24dp"
+                android:maxWidth="24dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/alert_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="信息提示"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- 中部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_confirm1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="是否删除？"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- 下部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_btn_footer1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_dialog_ok1"
+                android:layout_width="0dip"
+                android:layout_height="55dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_right_selector"
+                android:text=" 关  闭"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_footer2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_left_selector"
+                android:text="取  消"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/middle_line" />
+
+            <Button
+                android:id="@+id/btn_dialog_ok2"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_right_selector"
+                android:text="确  定"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_footer3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_dialog_btn31"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_left_selector"
+                android:text="总  是"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/middle_line" />
+
+            <Button
+                android:id="@+id/btn_dialog_btn32"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_left_selector"
+                android:text="只次一次"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/middle_line" />
+
+            <Button
+                android:id="@+id/btn_dialog_btn33"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_right_selector"
+                android:text="不需要"
+                android:textColor="@color/callrecorder_name"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

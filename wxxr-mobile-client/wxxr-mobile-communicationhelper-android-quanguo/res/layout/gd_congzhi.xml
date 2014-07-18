@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 这个布局不要轻易改动 -->
+
+    <com.wxxr.callhelper.qg.widget.BottomTabBar
+        android:id="@+id/home_bottom_tabbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </com.wxxr.callhelper.qg.widget.BottomTabBar>
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/home_bottom_tabbar"
+        android:layout_below="@id/titlebar"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_congzhi"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/gd_item_line"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_congzhi_bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:visibility="gone" >
+
+            <include layout="@layout/gd_private_zoo_divide_gray" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="@dimen/gd_padding_left_right"
+                android:paddingRight="@dimen/gd_padding_left_right" >
+
+                <TextView
+                    android:id="@+id/tv_prompt_type"
+                    style="@style/private_zoo_home_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="0dip"
+                    android:text="提醒类型"
+                    android:textColor="@color/guishudi_black" />
+
+                <ImageView
+                    android:id="@+id/iv_menu_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/gd_dialog_selector" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/subdescription_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dip"
+                android:lineSpacingExtra="5dp"
+                android:paddingBottom="0dp"
+                android:paddingLeft="@dimen/gd_padding_left_right"
+                android:paddingRight="@dimen/gd_padding_left_right"
+                android:paddingTop="0dp"
+                android:textSize="@dimen/fontsize_30" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dip"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/gd_padding_left_right"
+                android:paddingRight="@dimen/gd_padding_left_right" >
+
+                <Button
+                    android:id="@+id/btn_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/gd_light_green_btn_bg_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="电话充值"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontsize_30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="代呼叫10086,根据提示按2再按1
+                "
+                    android:textColor="@color/guishudi_black"
+                    android:textSize="@dimen/fontsize_30" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/gd_padding_left_right"
+                android:paddingRight="@dimen/gd_padding_left_right" >
+
+                <Button
+                    android:id="@+id/btn_query_reminning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/gd_light_green_btn_bg_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="查询余额"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fontsize_30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="代发101到10086,留意短信反馈"
+                    android:textColor="@color/guishudi_black"
+                    android:textSize="@dimen/fontsize_30" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

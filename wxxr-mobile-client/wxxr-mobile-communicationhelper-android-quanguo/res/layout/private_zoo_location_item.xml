@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_private_zoo_region_item"
+    style="@style/titlebar_textsize"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/private_zoo_title_seletor"
+    android:padding="10dip"
+    android:text="广东"
+    android:textColor="@drawable/private_zoo_location_item_text_color_selector" />

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_callrecorder_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gd_callrecord_item_height"
+        android:layout_marginLeft="@dimen/gd_callrecord_item_margin_left"
+        android:layout_marginRight="@dimen/gd_callrecord_item_margin_right"
+        android:gravity="center_vertical" 
+        >
+
+        <!-- 左 -->
+
+        <ImageView
+            android:id="@+id/gd_iv_callrecord_portrait"
+            android:layout_width="@dimen/gd_callrecord_item_portrait_width"
+            android:layout_height="@dimen/gd_callrecord_item_portrait_height"
+            android:background="@drawable/gd_callrecord_item_portrait"
+            android:visibility="visible" />
+        
+         <!-- 无头像 -->
+
+        <RelativeLayout
+            android:id="@+id/gd_rl_callrecord_portrait"
+            android:layout_width="@dimen/gd_callrecord_item_portrait_width"
+            android:layout_height="@dimen/gd_callrecord_item_portrait_height"
+            android:background="@drawable/gd_item_portrait_empty"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/gd_tv_callrecord_portrait_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/gd_callrecord_item_portrait_text_size" 
+                android:text="震"/>
+        </RelativeLayout>
+
+        <!-- 中 -->
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/gd_callrecord_item_number_status_margin_left"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <!-- 号码，时长 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/gd_callrecord_item_number_margin_top"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陈佳君"
+                    android:textColor="@color/gd_titlebar_text"
+                    android:textSize="@dimen/gd_callrecord_item_number_size" />
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_callrecord_item_duration_margin_left"
+                    android:text="(0&apos;&apos;00)"
+                    android:textColor="@color/gd_item_eighty"
+                    android:textSize="@dimen/gd_callrecord_item_duration_size"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <!-- 类型,日期 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/gd_callrecord_item_number_margin_bottom"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_callrecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/coming" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_callrecord_item_datetime_margin_left"
+                    android:text="4月18日  14:14"
+                    android:textColor="@color/gd_item_eighty"
+                    android:textSize="@dimen/gd_callrecord_item_duration_size" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 右 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_callrecord_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gd_play" />
+
+            <CheckBox
+                android:id="@+id/cb_callrecord"
+                style="@style/GD_MyCheckBox"
+                android:layout_width="@dimen/gd_callrecord_item_checkbox_width"
+                android:layout_height="@dimen/gd_callrecord_item_checkbox_height"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

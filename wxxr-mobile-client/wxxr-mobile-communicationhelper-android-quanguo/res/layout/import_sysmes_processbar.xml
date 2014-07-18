@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical" >
+
+        <!-- 上部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/gd_dialog_titlebar_height"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/gd_iv_titlebar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:background="@drawable/gd_dialog_private_contacts_icon" />
+
+            <TextView
+                android:id="@+id/tv_dialog_top"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_text_margin_left"
+                android:layout_weight="1"
+                android:text="进度100%即完成操作"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_titlebar_text_size" />
+        </LinearLayout>
+
+        <!-- 中间部分 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gd_dialog_content_margin_bottom"
+            android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+            android:layout_marginRight="@dimen/gd_dialog_titlebar_close_margin_right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_progressbar_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_dialog_content_margin_top"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_content_text_size" />
+
+            <com.wxxr.callhelper.qg.widget.MySeekBar
+                android:id="@+id/my_progressbar1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_dialog_content_margin_top"
+                android:progressDrawable="@drawable/seek_bg"
+                android:thumb="@null" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+
+    <ListView
+        android:id="@+id/gd_lv_private_contacts"
+      	android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:cacheColorHint="@color/white"
+        android:divider="@color/gd_item_line"
+        android:dividerHeight="@dimen/gd_lv_line_height"
+        android:fadingEdge="none"
+        android:listSelector="@color/white"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/gd_ll_private_contacts_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_private_lock_empty_first_margin_top"
+            android:text="您还没有添加私密联系人"
+            android:textColor="@color/gd_setting_text"
+            android:textSize="@dimen/gd_private_info_empty_text_size" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_private_lock_empty_second_margin_top" 
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_private_info_empty_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_private_contacts_empty_second_img_margin_left"
+                android:layout_marginRight="@dimen/gd_private_contacts_empty_second_img_margin_right"
+                android:background="@drawable/gd_private_lock_add_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_private_info_empty_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

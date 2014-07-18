@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical" >
+
+    <include layout="@layout/private_zoo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/et_private_zoo_telnum"
+                style="@style/editText_style"
+                android:layout_width="fill_parent"
+                android:hint="请输入手机号码"
+                android:inputType="phone" />
+
+            <com.wxxr.callhelper.qg.widget.CountTextView
+                android:id="@+id/tv_private_zoo_get_newpwd"
+                style="@style/private_button"
+                android:layout_width="100dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:text="获取新密码" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_private_zoo_pwd"
+            style="@style/editText_style"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dip"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_private_zoo__login_sure"
+        style="@style/private_button"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="50dip"
+        android:text="确认登录" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <com.wxxr.callhelper.qg.widget.NumberInputkeyboard
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.wxxr.callhelper.qg.widget.NumberInputkeyboard>
+    </RelativeLayout>
+
+</LinearLayout>

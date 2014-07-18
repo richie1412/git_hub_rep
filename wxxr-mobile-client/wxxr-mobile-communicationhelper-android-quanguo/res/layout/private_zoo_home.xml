@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical" >
+
+    <include layout="@layout/private_zoo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 个人信息编辑栏 -->
+
+        <LinearLayout
+            android:id="@+id/ll_private_zoo_home_go_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="180dip"
+            android:background="@color/private_zoo_home_infomation"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="135dip"
+                    android:layout_height="120dip" >
+
+                    <LinearLayout
+                        android:layout_width="115dip"
+                        android:layout_height="115dip"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@drawable/private_zoo_default_head"
+                        android:padding="3dp" >
+
+                        <ImageView
+                            android:id="@+id/iv_private_zoo_home_face"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/private_zoo_default_head"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_private_zoo_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/private_zoo_female"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dip"
+                    android:layout_marginLeft="15dip"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_private_zoo_home_nickname"
+                        style="@style/item_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="昵称"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_private_zoo_home_nickname"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_iv_private_zoo_home_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="编辑个人信息"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_private_zoo_home_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/private_zoo_home_edit_seletor" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_private_zoo_home_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="北京"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dip" >
+
+                <TextView
+                    android:id="@+id/tv_private_zoo_home_telnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:text="Tel:13811815413"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 下半部 -->
+
+        <LinearLayout
+            android:id="@+id/ll_private_zoo_mobile_query"
+            style="@style/item_height"
+            android:layout_width="fill_parent"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/item_text_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="移动业务查询" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ll_private_zoo_mobile_query_divider"
+            layout="@layout/private_zoo_item_divider" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical" >
+
+                <include layout="@layout/private_zoo_item_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_private_zoo_reset_pwd"
+                    style="@style/item_height"
+                    android:layout_width="fill_parent" >
+
+                    <TextView
+                        style="@style/item_text_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="修改密码" />
+                </LinearLayout>
+
+                <include layout="@layout/private_zoo_item_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_tuichu_state"
+                    style="@style/item_height"
+                    android:layout_width="fill_parent" >
+
+                    <TextView
+                        style="@style/item_text_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="退出账号"
+                        android:textColor="@color/home_user_color" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

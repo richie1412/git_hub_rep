@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gd_guess_like_detail_selector"
+    android:orientation="horizontal"
+    android:padding="15dp" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/guess_like_detail_icon" />
+
+    <TextView
+        android:id="@+id/tv_guess_like_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:maxLines="3"
+        android:text="内容"
+        android:textColor="@color/guishudi_black"
+        android:textSize="@dimen/gd_cainnixihuan_detailfont" />
+
+</LinearLayout>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <!-- 1-1 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 2-1 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_hz_channel_icon_margin_top"
+                android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 3-1 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_hz_channel_icon_margin_top"
+                android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 4-1 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_hz_channel_icon_margin_top"
+                android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gd_hz_channel_icon_margin_left"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_channel_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gd_channel_default_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/ttv_channel_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gd_hz_channel_text_margin_top"
+                        android:text="系统默认"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_hz_channel_name_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

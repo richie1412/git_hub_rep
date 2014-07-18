@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/gd_iv_titlebar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:background="@drawable/gd_simi_retpass" />
+
+            <TextView
+                android:id="@+id/tv_dialog_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_text_margin_left"
+                android:text="忘记密码"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_titlebar_text_size" />
+        </LinearLayout>
+
+        <!-- 忘记密码框 -->
+
+        <LinearLayout
+            android:id="@+id/gd_simi_input_div"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/gd_dialog_forgetpwd_text_margin_left"
+            android:layout_marginRight="@dimen/gd_dialog_forgetpwd_text_margin_right"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/et_simi_divline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gd_dialog_forgetpwd_text_margin_top"
+                android:text="系统已发送校验码到您的邮箱：#。\n请您登录获取，并输入校验码。"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_forgetpwd_text_size" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/gd_dialog_forgetpwd_et_height"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/et_simi_authcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:hint="输入校验码"
+                    android:textColor="@color/gd_setting_text"
+                    android:textColorHint="@color/gd_setting_text"
+                    android:textSize="@dimen/gd_dialog_forgetpwd_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="@dimen/gd_dialog_forgetpwd_edit_line_margin_top"
+                android:background="@color/gd_titlebar_text" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_simi_errcodetip"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/gd_dialog_forgetpwd_second_dialog"
+            android:layout_marginLeft="@dimen/gd_dialog_forgetpwd_text_margin_left"
+            android:layout_marginRight="@dimen/gd_dialog_forgetpwd_text_margin_right"
+            android:layout_marginTop="@dimen/gd_dialog_forgetpwd_text_margin_top"
+            android:gravity="center_vertical"
+            android:textColor="@color/gd_titlebar_text"
+            android:textSize="@dimen/gd_dialog_forgetpwd_text_size"
+            android:text="@string/authcode_error"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_btn_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gd_dialog_forgetpwd_btn_margin_top" >
+
+            <TextView
+                android:id="@+id/ll_simi_add_concel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/gd_it_left_btn_bg"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_btn_text_size" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/gd_dialog_line" />
+
+            <TextView
+                android:id="@+id/ll_simi_add_check"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/gd_it_right_btn_bg"
+                android:gravity="center"
+                android:text="校验"
+                android:textColor="@color/gd_item_eighty"
+                android:textSize="@dimen/gd_dialog_btn_text_size" />
+            
+             <TextView
+                android:id="@+id/ll_simi_add_sure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/gd_it_right_btn_bg"
+                android:gravity="center"
+                android:text="校验"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_btn_text_size" 
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

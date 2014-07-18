@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical" >
+
+    <include layout="@layout/private_zoo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_telnum"
+            android:layout_height="20dp"
+            style="@style/editText_style"
+            android:layout_width="fill_parent"
+            android:hint="请输入手机号码"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/et_pwd"
+            style="@style/editText_style"
+             android:layout_height="20dp"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="15dip"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_private_zoo_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:layout_marginTop="20dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="忘记密码 ？"
+            android:textColor="@color/home_user_color"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="35dp"
+            android:background="@color/home_user_color" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_private_zoo_login"
+        style="@style/private_button"
+         android:layout_height="20dp"
+        android:layout_width="fill_parent"
+        android:text="登  录" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+       <com.wxxr.callhelper.qg.widget.NumberInputkeyboard
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.wxxr.callhelper.qg.widget.NumberInputkeyboard>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical" >
+
+    <include layout="@layout/private_zoo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_pwd"
+            style="@style/editText_style"
+            android:layout_width="fill_parent"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/et_repwd"
+            style="@style/editText_style"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="15dip"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/editText_button"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="50dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_private_zoo_concel"
+            style="@style/titlebar_textsize"
+            android:layout_width="0dip"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/private_zoo_concel"
+            android:text="取 消"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_private_zoo_sure"
+            style="@style/titlebar_textsize"
+            android:layout_width="0dip"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/private_zoo_ok"
+            android:text="确 定"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/gd_system_dialog_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/mini_pb"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <!-- 上部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/cm_p_d_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:background="@drawable/gd_dialog_icon" />
+
+            <TextView
+                android:id="@+id/cm_p_d_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_text_margin_left"
+                android:layout_weight="1"
+                android:text="提示"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_titlebar_text_size" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vi_private_zoo_tanchukuang_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/gd_dialog_line"
+            android:visibility="visible" />
+
+        <!-- 中部分 -->
+
+        <LinearLayout
+            android:id="@+id/gd_ll_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+            android:layout_marginTop="@dimen/gd_dialog_content_margin_top"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/cm_p_d_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据加载中..."
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_content_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 被嫌弃 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/titlebar_bg"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:maxHeight="24dp"
+            android:maxWidth="24dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:text="提示"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="6dp"
+        android:paddingTop="6dp"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/cm_p_d_progressbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/callrecorder_name"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip" >
+
+    <!-- @drawable/message_box_bj -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/iv_new_dialog_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/dialog_icon_warn" />
+
+        <TextView
+            android:id="@+id/tv_new_dialog_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息提示"
+            android:textColor="@color/user_now_open"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/new_dialog_line" />
+
+    <!-- 两行文本 -->
+
+    <LinearLayout
+        android:id="@+id/ll_confirm1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_first_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/more_item" />
+
+        <TextView
+            android:id="@+id/tv_second_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/more_item" />
+    </LinearLayout>
+
+    <!-- 特别提示文本 -->
+
+    <LinearLayout
+        android:id="@+id/ll_confirm2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dip"
+            android:text="特别提示"
+            android:textColor="@color/more_item"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="15dp"
+            android:background="@color/more_item" />
+
+
+        -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您已成功添加私密联系人，密码锁当前已生效。若今后忘记密码，输入您添加过的任意私密联系人号码即可解锁。"
+            android:textColor="@color/huizhi_dialog_ziti"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- 私密锁提示 -->
+
+    <LinearLayout
+        android:id="@+id/ll_confirm3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_modi_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="修改密码"
+            android:textColor="@color/communication_tutu"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/tanchu_hengtiao_huise" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="私密来信通知提醒"
+                android:textColor="@color/communication_tutu"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iv_sm_switch"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/close" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 录音设置 -->
+
+    <LinearLayout
+        android:id="@+id/ll_confirm4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:orientation="vertical"
+        android:visibility="gone"
+         >
+        
+          <!-- 自动 -->
+
+        <LinearLayout
+            android:id="@+id/ll_auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="自动录音"
+                android:textColor="@color/more_item"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_auto"
+                android:layout_width="60dip"
+                android:layout_height="55dip"
+                android:background="@drawable/callrecordsetting_press" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/callrecordsetting_line" />
+
+        <!-- 手动 -->
+
+        <LinearLayout
+            android:id="@+id/ll_hand"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="手动录音"
+                android:textColor="@color/more_item"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_hand"
+                android:layout_width="60dip"
+                android:layout_height="55dip"
+                android:background="@drawable/callrecordsetting" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/callrecordsetting_line" />
+
+        <!-- 关闭 -->
+
+        <LinearLayout
+            android:id="@+id/ll_close"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="关闭录音"
+                android:textColor="@color/more_item"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="60dip"
+                android:layout_height="55dip"
+                android:background="@drawable/callrecordsetting" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 删除文本 -->
+
+    <TextView
+        android:id="@+id/tv_new_dialog_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="18dp"
+        android:text="是否删除？"
+        android:textColor="@color/more_item"
+        android:textSize="20sp"
+         />
+
+    <!-- 按钮 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/new_dialog_line2" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_new_dialog_cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/new_dialog_btn_selector"
+            android:padding="12dp"
+            android:text="取消"
+            android:textColor="@color/user_now_open"
+            android:textSize="22sp" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/new_dialog_line2" />
+
+        <Button
+            android:id="@+id/btn_new_dialog_ok"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/new_dialog_btn_selector"
+            android:padding="12dp"
+            android:text="确定"
+            android:textColor="@color/user_now_open"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_new_dialog_remeber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_dialog_btn_selector"
+        android:padding="12dp"
+        android:text="我记住了"
+        android:textColor="@color/user_now_open"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+</LinearLayout>

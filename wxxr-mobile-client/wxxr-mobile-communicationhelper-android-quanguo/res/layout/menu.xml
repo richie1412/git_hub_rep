@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dip"
+        android:background="@color/gd_dialog_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gd_menu_height"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_all_choose"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/gd_tv_menu_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全  选"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_menu_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/gd_dialog_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_cancle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/gd_tv_menu_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消选择"
+                android:textColor="@color/gd_item_eighty"
+                android:textSize="@dimen/gd_menu_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/gd_dialog_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/gd_tv_menu_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删  除"
+                android:textColor="@color/gd_item_eighty"
+                android:textSize="@dimen/gd_menu_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

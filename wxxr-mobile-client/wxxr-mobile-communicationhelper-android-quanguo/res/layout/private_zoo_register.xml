@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/private_zoo_home"
+    android:orientation="vertical" >
+
+    <include layout="@layout/private_zoo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 注册登录 -->
+
+        <LinearLayout
+            android:id="@+id/ll_register"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <EditText
+                    android:id="@+id/et_user_phone"
+                    style="@style/editText_style"
+                    android:layout_width="fill_parent"
+                    android:hint="请输入手机号码" />
+
+                <com.wxxr.callhelper.qg.widget.CountTextView
+                    android:id="@+id/tv_get_passwd"
+                    android:layout_width="100dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/private_zoo_dynamic_pwd"
+                    android:text="获取密码"
+                    android:textColor="@color/white"
+                    android:textSize="18dip" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et_user_authcode"
+                style="@style/editText_style"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dip"
+                android:inputType="textPassword"
+                android:hint="动态密码" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_register_protocol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/iv_private_zoo_agreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/private_zoo_agreen_seletor"
+                    android:button="@null"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="同意"
+                    android:textColor="@color/home_user_color"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_user_protocol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客户服务协议"
+                        android:textColor="@color/home_user_color"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/home_user_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/private_button"
+                android:layout_width="fill_parent"
+                android:text="注  册"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <com.wxxr.callhelper.qg.widget.NumberInputkeyboard
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.wxxr.callhelper.qg.widget.NumberInputkeyboard>
+    </RelativeLayout>
+
+</LinearLayout>

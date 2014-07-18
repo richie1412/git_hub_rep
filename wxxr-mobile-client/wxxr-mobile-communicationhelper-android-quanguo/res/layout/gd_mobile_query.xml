@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.wxxr.callhelper.qg.widget.BottomTabBar
+        android:id="@+id/home_bottom_tabbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/home_bottom_tabbar"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/titlebar" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/gd_mobile_query_item_margin_bottom"
+                    android:background="@drawable/gd_white_corner_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/gd_mobile_query_item_padding_top_bottom"
+                    android:paddingLeft="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingRight="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingTop="@dimen/gd_mobile_query_item_padding_top_bottom" >
+
+                    <TextView
+                        style="@style/guishudi_balck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/account_remanning"
+                        android:text="本机号码账户余额" />
+
+                    <Button
+                        android:id="@+id/btn_account_remaining "
+                        style="@style/query_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guishudi_btn_selector"
+                        android:text="查询" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/gd_mobile_query_item_margin_bottom"
+                    android:background="@drawable/gd_white_corner_bg"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/gd_mobile_query_item_padding_top_bottom"
+                    android:paddingLeft="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingRight="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingTop="@dimen/gd_mobile_query_item_padding_top_bottom" >
+
+                    <TextView
+                        style="@style/guishudi_balck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/order_service"
+                        android:text="订购的数据业务" />
+
+                    <Button
+                        android:id="@+id/btn_order_service"
+                        style="@style/query_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guishudi_btn_selector"
+                        android:text="查询" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/gd_mobile_query_item_margin_bottom"
+                    android:background="@drawable/gd_white_corner_bg"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/gd_mobile_query_item_padding_top_bottom"
+                    android:paddingLeft="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingRight="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingTop="@dimen/gd_mobile_query_item_padding_top_bottom" >
+
+                    <TextView
+                        style="@style/guishudi_balck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/gprs_remanning"
+                        android:text="GPRS月套餐剩余量" />
+
+                    <Button
+                        android:id="@+id/btn_gprs_remainning"
+                        style="@style/query_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guishudi_btn_selector"
+                        android:text="查询" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/gd_white_corner_bg"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/gd_mobile_query_item_padding_top_bottom"
+                    android:paddingLeft="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingRight="@dimen/gd_mobile_query_item_padding_left_right"
+                    android:paddingTop="@dimen/gd_mobile_query_item_padding_top_bottom" >
+
+                    <TextView
+                        style="@style/guishudi_balck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/sms_remanning"
+                        android:text="套餐剩余短信" />
+
+                    <Button
+                        android:id="@+id/btn_sms_remainning"
+                        style="@style/query_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guishudi_btn_selector"
+                        android:text="查询" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/tip"
+                    android:drawablePadding="10dp"
+                    android:gravity="bottom"
+                    android:text="点击查询后,通信助手代您发送免费的查询"
+                    android:textColor="@color/sub_description_gray"
+                    android:textSize="@dimen/gd_mobile_query_desc_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="短信到10086（套餐剩余短信代呼叫10086免费电话）请稍后到手机收件箱查结果。
+        "
+                    android:textColor="@color/sub_description_gray"
+                    android:textSize="@dimen/gd_mobile_query_desc_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

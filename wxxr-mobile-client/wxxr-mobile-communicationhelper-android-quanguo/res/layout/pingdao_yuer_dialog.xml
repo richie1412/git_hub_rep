@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gd_dialog_bg"
+        android:orientation="vertical" >
+
+        <!-- 上部分 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_titlebar_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/gd_iv_titlebar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+                android:background="@drawable/gd_dialog_icon" />
+
+            <TextView
+                android:id="@+id/tv_dialog_top"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gd_dialog_titlebar_text_margin_left"
+                android:layout_weight="1"
+                android:text="提示"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_titlebar_text_size" />
+
+            <ImageView
+                android:id="@+id/gd_iv_dialog_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/gd_dialog_titlebar_close_margin_right"
+                android:background="@drawable/gd_dialog_it_close_selector"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 中部分 -->
+
+         <LinearLayout
+            android:id="@+id/gd_ll_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="85dip"
+            android:layout_marginLeft="@dimen/gd_dialog_titlebar_icon_margin_left"
+            android:layout_marginRight="@dimen/gd_dialog_titlebar_close_margin_right"
+            android:layout_marginTop="@dimen/gd_dialog_content_margin_top"
+            android:visibility="visible" 
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dialog_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成功订阅每日育儿，需要设置小孩的出生日期"
+                android:textColor="@color/gd_titlebar_text"
+                android:textSize="@dimen/gd_dialog_content_text_size" />
+            
+            <TextView 
+                android:id="@+id/tv_yuer_riqi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip"
+                android:background="@android:color/transparent"
+                android:hint="日期"
+                android:textColorHint="@color/gd_setting_text"
+                android:textColor="@color/gd_titlebar_text"
+                android:gravity="center"
+                android:textSize="18sp"
+                />
+            <View 
+                 android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="7dip"
+                android:background="@color/gd_titlebar_text"
+                />
+        </LinearLayout>
+
+        <!-- 底部按钮 -->
+
+        <LinearLayout
+            android:id="@+id/ll_btn_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/gd_it_left_btn_bg"
+                android:text="取消"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_btn_text_size" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/gd_dialog_line" />
+
+            <Button
+                android:id="@+id/bt_sure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/gd_it_right_btn_bg"
+                android:text="确定"
+                android:textColor="@color/gd_it_dialog_btn_font_selector"
+                android:textSize="@dimen/gd_dialog_btn_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 被嫌弃 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/pingdao_tanchukuang"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_dialog_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/titlebar_bg"
+                android:gravity="center_vertical|left" >
+
+                <TextView
+                    android:id="@+id/tv_dialog_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dip"
+                    android:paddingLeft="10dp"
+                    android:text="请输入预产期或者宝宝的出生日期"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" 
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/temp_line2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pingdao_dialog_shuru"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:text="2013年1月9日"
+                    android:textColor="@color/communication_tutu"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/pingdao_tanchukuang"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_left_selector"
+            android:text="取  消"
+            android:textColor="@color/confirmdialog_textcolor"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_right_selector"
+            android:text="确  定"
+            android:textColor="@color/confirmdialog_textcolor"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>

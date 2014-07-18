@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_zhushoubobao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gd_news_pingdao_margin_top"
+        android:background="@drawable/gd_pingdao_item_selector"
+        android:orientation="horizontal"
+        android:padding="11.5dp" >
+
+        <ImageView
+            android:layout_width="@dimen/gd_wzx_zsbb_icon"
+            android:layout_height="@dimen/gd_wzx_zsbb_icon"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/gd_zhushoubobao" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="助手播报"
+                android:textColor="@color/guishudi_black"
+                android:textSize="@dimen/gd_news_zsbb_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:lineSpacingExtra="1dp"
+                android:text="这里有好听、好玩、好看的资讯，广东移动通信助手用户专享每天精彩"
+                android:textColor="@color/gd_setting_text"
+                android:textSize="@dimen/gd_news_zsbb_desc" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pop_gray_bg"
+    android:orientation="vertical" >
+
+    <!-- 标题头 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <ImageView
+            android:id="@+id/iv_region_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_dialog_selector" />
+
+        <TextView
+            android:id="@+id/tv_pick_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="选择地区"
+            android:textColor="@color/guishudi_black"
+            android:textSize="@dimen/fontsize_34" />
+
+        <ImageView
+            android:id="@+id/iv_region_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gd_title_right_selector" />
+    </LinearLayout>
+
+    <include layout="@layout/gd_private_zoo_divide_gray" />
+    <!-- 地区选择框 -->
+
+    <LinearLayout
+        android:id="@+id/ll_region_pick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <com.wxxr.callhelper.qg.widget.pick.WheelView
+            android:id="@+id/provice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="1" >
+        </com.wxxr.callhelper.qg.widget.pick.WheelView>
+
+        <com.wxxr.callhelper.qg.widget.pick.WheelView
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="80dp"
+            android:layout_weight="1" >
+        </com.wxxr.callhelper.qg.widget.pick.WheelView>
+    </LinearLayout>
+    <!-- 年龄选择框 -->
+
+    <LinearLayout
+        android:id="@+id/ll_age_pick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <com.wxxr.callhelper.qg.widget.pick.WheelView
+            android:id="@+id/year"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" >
+        </com.wxxr.callhelper.qg.widget.pick.WheelView>
+
+        <com.wxxr.callhelper.qg.widget.pick.WheelView
+            android:id="@+id/month"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" >
+        </com.wxxr.callhelper.qg.widget.pick.WheelView>
+
+        <com.wxxr.callhelper.qg.widget.pick.WheelView
+            android:id="@+id/day"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" >
+        </com.wxxr.callhelper.qg.widget.pick.WheelView>
+    </LinearLayout>
+
+</LinearLayout>

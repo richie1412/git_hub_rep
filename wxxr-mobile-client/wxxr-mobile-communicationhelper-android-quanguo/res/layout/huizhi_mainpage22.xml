@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_huizhi_main_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.wxxr.callhelper.qg.widget.BottomTabBar
+        android:id="@+id/home_bottom_tabbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/home_bottom_tabbar"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include layout="@layout/titlebar" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ListView
+                    android:id="@+id/huizhi_listview_div"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:cacheColorHint="@color/white"
+                    android:listSelector="@color/white"
+                    android:divider="@color/gd_item_line"
+                    android:dividerHeight="@dimen/gd_lv_line_height"
+                    android:fadingEdge="none"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+
+                <!-- android:background="@drawable/sms_huizhi_empty" -->
+
+                <LinearLayout
+                    android:id="@+id/huizhi_empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_lh_hz_empty_text_margin_left"
+                        android:layout_marginTop="@dimen/gd_lh_hz_empty_first_text_margin_top"
+                        android:text="您还没有短信回执记录"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_lh_hz_empty_text_size" />
+
+                    <TextView
+                        android:id="@+id/qg_tv_huizhi_empty_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gd_lh_hz_empty_text_margin_left"
+                        android:layout_marginTop="@dimen/gd_lh_hz_empty_second_text_margin_top"
+                        android:text="如果您没办理短信回执业务，无法使用此功能"
+                        android:textColor="@color/gd_setting_text"
+                        android:textSize="@dimen/gd_lh_hz_empty_text_size" />
+
+                    <Button
+                        android:id="@+id/gd_empty_lh_hz_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/gd_lh_hz_empty_btn_margin_right"
+                        android:layout_marginTop="@dimen/gd_lh_hz_empty_btn_margin_top"
+                        android:background="@drawable/gd_lh_hz_empty_btn_selector"
+                        android:text="马上办理"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/gd_lh_hz_empty_text_size" />
+
+                    <ImageView
+                        android:id="@+id/qg_iv_huizhi_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/gd_huizhi_empty_img"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/huizhi_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/mini_pb"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- 遗弃 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/titlebar_bg"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/rl_tab1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/huizhi_text_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="回执报告"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/iv_title_sanjiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="3dip"
+                    android:layout_marginRight="15dip"
+                    android:background="@drawable/titelbar_sanjiao" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="3dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/leak_msg_stand_line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_tab2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/huizhi_text_tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="功能设置"
+                    android:textColor="@color/leak_msg_bg"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/huizhi_gongnen_div"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <View
+                android:id="@+id/v_left"
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:layout_marginRight="15dip"
+                android:layout_weight="1"
+                android:background="@color/leak_msg_line" />
+
+            <View
+                android:id="@+id/v_right"
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:layout_marginLeft="15dip"
+                android:layout_weight="1"
+                android:background="@color/leak_msg_line"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
